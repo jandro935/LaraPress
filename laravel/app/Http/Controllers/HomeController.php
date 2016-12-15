@@ -12,12 +12,5 @@ class HomeController extends Controller
 		$data = Post::findOrFail($id);
 
 		return view('home', compact('data'));
-
-		// Confin
-//		$data = new Page();
-//		$data->setConnection('wordpress');
-//		$data->slug('sample-page')->first();
-//
-//		return view('home')->with('data', $data);
 	}
 }
