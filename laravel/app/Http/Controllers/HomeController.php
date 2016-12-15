@@ -13,6 +13,7 @@ class HomeController extends Controller
 
 		return view('home', compact('data'));
 
+		// Confin
 //		$data = new Page();
 //		$data->setConnection('wordpress');
 //		$data->slug('sample-page')->first();
