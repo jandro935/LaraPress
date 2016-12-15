@@ -1,0 +1,16 @@
+{
+    "name": "jandro935/wordpress",
+    "description": "WordPress CMS Package",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "jandro935",
+            "email": "jandro935@gmail.com"
+        }
+    ],
+    "require": {
+        "johnpbloch/wordpress": "^4.7",
+        "vlucas/phpdotenv": "^2.4"
+    }
+}
