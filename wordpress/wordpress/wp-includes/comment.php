@@ -252,7 +252,7 @@ function get_comment_statuses() {
  *
  * @since 4.3.0
  *
- * @param string $post_type    Optional. Post type. Default 'post'.
+ * @param string $post_type    Optional. Posts type. Default 'post'.
  * @param string $comment_type Optional. Comment type. Default 'comment'.
  * @return string Expected return value is 'open' or 'closed'.
  */
@@ -284,7 +284,7 @@ function get_default_comment_status( $post_type = 'post', $comment_type = 'comme
 	 *
 	 * @param string $status       Default status for the given post type,
 	 *                             either 'open' or 'closed'.
-	 * @param string $post_type    Post type. Default is `post`.
+	 * @param string $post_type    Posts type. Default is `post`.
 	 * @param string $comment_type Type of comment. Default is `comment`.
 	 */
 	return apply_filters( 'get_default_comment_status' , $status, $post_type, $comment_type );
@@ -1228,7 +1228,7 @@ function wp_blacklist_check($author, $email, $url, $comment, $user_ip, $user_age
  *
  * @since 2.5.0
  *
- * @param int $post_id Optional. Post ID.
+ * @param int $post_id Optional. Posts ID.
  * @return object|array Comment stats.
  */
 function wp_count_comments( $post_id = 0 ) {
@@ -2266,7 +2266,7 @@ function wp_defer_comment_counting($defer=null) {
  *
  * @staticvar array $_deferred
  *
- * @param int|null $post_id     Post ID.
+ * @param int|null $post_id     Posts ID.
  * @param bool     $do_deferred Optional. Whether to process previously deferred
  *                              post comment counts. Default false.
  * @return bool|void True on success, false on failure or if post with ID does
@@ -2304,7 +2304,7 @@ function wp_update_comment_count($post_id, $do_deferred=false) {
  *
  * @global wpdb $wpdb WordPress database abstraction object.
  *
- * @param int $post_id Post ID
+ * @param int $post_id Posts ID
  * @return bool True on success, false on '0' $post_id or if post with ID does not exist.
  */
 function wp_update_comment_count_now($post_id) {
@@ -2328,7 +2328,7 @@ function wp_update_comment_count_now($post_id) {
 	 *
 	 * @param int $new     The new comment count. Default null.
 	 * @param int $old     The old comment count.
-	 * @param int $post_id Post ID.
+	 * @param int $post_id Posts ID.
 	 */
 	$new = apply_filters( 'pre_wp_update_comment_count_now', null, $old, $post_id );
 
@@ -2347,7 +2347,7 @@ function wp_update_comment_count_now($post_id) {
 	 *
 	 * @since 2.3.0
 	 *
-	 * @param int $post_id Post ID.
+	 * @param int $post_id Posts ID.
 	 * @param int $new     The new comment count.
 	 * @param int $old     The old comment count.
 	 */
@@ -2473,7 +2473,7 @@ function do_all_pings() {
  *
  * @global wpdb $wpdb WordPress database abstraction object.
  *
- * @param int|WP_Post $post_id Post object or ID to do trackbacks on.
+ * @param int|WP_Post $post_id Posts object or ID to do trackbacks on.
  */
 function do_trackbacks( $post_id ) {
 	global $wpdb;
@@ -2523,8 +2523,8 @@ function do_trackbacks( $post_id ) {
  *
  * @since 1.2.0
  *
- * @param int $post_id Post ID.
- * @return int Same as Post ID from parameter
+ * @param int $post_id Posts ID.
+ * @return int Same as Posts ID from parameter
  */
 function generic_ping( $post_id = 0 ) {
 	$services = get_option('ping_sites');
@@ -2545,8 +2545,8 @@ function generic_ping( $post_id = 0 ) {
  * @since 0.71
  * @since 4.7.0 $post_id can be a WP_Post object.
  *
- * @param string $content Post content to check for links. If empty will retrieve from post.
- * @param int|WP_Post $post_id Post Object or ID.
+ * @param string $content Posts content to check for links. If empty will retrieve from post.
+ * @param int|WP_Post $post_id Posts Object or ID.
  */
 function pingback( $content, $post_id ) {
 	include_once( ABSPATH . WPINC . '/class-IXR.php' );
@@ -2663,7 +2663,7 @@ function privacy_ping_filter($sites) {
  * @param string $trackback_url URL to send trackbacks.
  * @param string $title Title of post.
  * @param string $excerpt Excerpt of post.
- * @param int $ID Post ID.
+ * @param int $ID Posts ID.
  * @return int|false|void Database query from update.
  */
 function trackback($trackback_url, $title, $excerpt, $ID) {
@@ -2833,7 +2833,7 @@ function _prime_comment_caches( $comment_ids, $update_meta_cache = true ) {
  * @access private
  * @since 2.7.0
  *
- * @param WP_Post  $posts Post data object.
+ * @param WP_Post  $posts Posts data object.
  * @param WP_Query $query Query object.
  * @return array
  */
@@ -2871,7 +2871,7 @@ function _close_comments_for_old_posts( $posts, $query ) {
  * @since 2.7.0
  *
  * @param bool $open Comments open or closed
- * @param int $post_id Post ID
+ * @param int $post_id Posts ID
  * @return bool $open
  */
 function _close_comments_for_old_post( $open, $post_id ) {
@@ -2957,7 +2957,7 @@ function wp_handle_comment_submission( $comment_data ) {
 		 *
 		 * @since 1.5.0
 		 *
-		 * @param int $comment_post_ID Post ID.
+		 * @param int $comment_post_ID Posts ID.
 		 */
 		do_action( 'comment_id_not_found', $comment_post_ID );
 
@@ -2981,7 +2981,7 @@ function wp_handle_comment_submission( $comment_data ) {
 		 *
 		 * @since 1.5.0
 		 *
-		 * @param int $comment_post_ID Post ID.
+		 * @param int $comment_post_ID Posts ID.
 		 */
 		do_action( 'comment_closed', $comment_post_ID );
 
@@ -2994,7 +2994,7 @@ function wp_handle_comment_submission( $comment_data ) {
 		 *
 		 * @since 2.9.0
 		 *
-		 * @param int $comment_post_ID Post ID.
+		 * @param int $comment_post_ID Posts ID.
 		 */
 		do_action( 'comment_on_trash', $comment_post_ID );
 
@@ -3007,7 +3007,7 @@ function wp_handle_comment_submission( $comment_data ) {
 		 *
 		 * @since 1.5.1
 		 *
-		 * @param int $comment_post_ID Post ID.
+		 * @param int $comment_post_ID Posts ID.
 		 */
 		do_action( 'comment_on_draft', $comment_post_ID );
 
@@ -3020,7 +3020,7 @@ function wp_handle_comment_submission( $comment_data ) {
 		 *
 		 * @since 2.9.0
 		 *
-		 * @param int $comment_post_ID Post ID.
+		 * @param int $comment_post_ID Posts ID.
 		 */
 		do_action( 'comment_on_password_protected', $comment_post_ID );
 
@@ -3033,7 +3033,7 @@ function wp_handle_comment_submission( $comment_data ) {
 		 *
 		 * @since 2.8.0
 		 *
-		 * @param int $comment_post_ID Post ID.
+		 * @param int $comment_post_ID Posts ID.
 		 */
 		do_action( 'pre_comment_on_post', $comment_post_ID );
 

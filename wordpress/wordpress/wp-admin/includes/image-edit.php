@@ -9,7 +9,7 @@
 /**
  * Loads the WP image-editing interface.
  *
- * @param int         $post_id Post ID.
+ * @param int         $post_id Posts ID.
  * @param bool|object $msg     Optional. Message to display for image editor updates or errors.
  *                             Default false.
  */
@@ -247,7 +247,7 @@ function wp_stream_image( $image, $mime_type, $post_id ) {
 		 * @since 3.5.0
 		 *
 		 * @param WP_Image_Editor $image   WP_Image_Editor instance.
-		 * @param int             $post_id Post ID.
+		 * @param int             $post_id Posts ID.
 		 */
 		$image = apply_filters( 'image_editor_save_pre', $image, $post_id );
 
@@ -265,7 +265,7 @@ function wp_stream_image( $image, $mime_type, $post_id ) {
 		 * @deprecated 3.5.0 Use image_editor_save_pre instead.
 		 *
 		 * @param resource $image   Image resource to be streamed.
-		 * @param int      $post_id Post ID.
+		 * @param int      $post_id Posts ID.
 		 */
 		$image = apply_filters( 'image_save_pre', $image, $post_id );
 
@@ -312,7 +312,7 @@ function wp_save_image_file( $filename, $image, $mime_type, $post_id ) {
 		 * @param string          $filename  Name of the file to be saved.
 		 * @param WP_Image_Editor $image     WP_Image_Editor instance.
 		 * @param string          $mime_type Image mime type.
-		 * @param int             $post_id   Post ID.
+		 * @param int             $post_id   Posts ID.
 		 */
 		$saved = apply_filters( 'wp_save_image_editor_file', null, $filename, $image, $mime_type, $post_id );
 
@@ -339,7 +339,7 @@ function wp_save_image_file( $filename, $image, $mime_type, $post_id ) {
 		 * @param string          $filename  Name of the file to be saved.
 		 * @param WP_Image_Editor $image     WP_Image_Editor instance.
 		 * @param string          $mime_type Image mime type.
-		 * @param int             $post_id   Post ID.
+		 * @param int             $post_id   Posts ID.
 		 */
 		$saved = apply_filters( 'wp_save_image_file', null, $filename, $image, $mime_type, $post_id );
 

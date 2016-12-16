@@ -133,7 +133,7 @@ Con todo esto ya estaríamos en disposición de empezar a utilizar el proyecto.
 
 ```bash
 cd laravel
-php artisan make:model Post
+php artisan make:model Posts
 ```
 
 Dentro del modelo creado:
@@ -141,7 +141,7 @@ Dentro del modelo creado:
 ```php
 namespace App;
 
-class Post extends \Corcel\Post
+class Posts extends \Corcel\Posts
 {
     protected $connection = 'wordpress';
 }
@@ -161,7 +161,7 @@ Y dentro del controlador creado:
 public function index()
 {
     $id = 1;
-    $data = Post::findOrFail($id);
+    $data = Posts::findOrFail($id);
 
     return view('home', compact('data'));
 }
@@ -186,8 +186,8 @@ Route::get('/', [
 
 Esto es todo por ahora...
 
-[Fuente principal 1](https://styde.net/crear-un-sitio-web-con-wordpress-laravel-y-composer-parte-1/) 
+[Fuente 1](https://styde.net/crear-un-sitio-web-con-wordpress-laravel-y-composer-parte-1/) 
 
-[Fuente principal 2](https://styde.net/crear-un-sitio-web-con-wordpress-laravel-y-composer-parte-2/) 
+[Fuente 2](https://styde.net/crear-un-sitio-web-con-wordpress-laravel-y-composer-parte-2/) 
 
-
+[Fuente 3](https://github.com/corcel/corcel) 

@@ -12,7 +12,7 @@
  * @since 1.2.0
  * @since 4.4.0 Added the `$post` parameter.
  *
- * @param int|WP_Post $post Optional. Post ID or post object. Default is the global `$post`.
+ * @param int|WP_Post $post Optional. Posts ID or post object. Default is the global `$post`.
  */
 function the_permalink( $post = 0 ) {
 	/**
@@ -22,7 +22,7 @@ function the_permalink( $post = 0 ) {
 	 * @since 4.4.0 Added the `$post` parameter.
 	 *
 	 * @param string      $permalink The permalink for the current post.
-	 * @param int|WP_Post $post      Post ID, WP_Post object, or 0. Default 0.
+	 * @param int|WP_Post $post      Posts ID, WP_Post object, or 0. Default 0.
 	 */
 	echo esc_url( apply_filters( 'the_permalink', get_permalink( $post ), $post ) );
 }
@@ -97,7 +97,7 @@ function permalink_anchor( $mode = 'id' ) {
  *
  * @see get_permalink()
  *
- * @param int|WP_Post $post      Optional. Post ID or post object. Default is the global `$post`.
+ * @param int|WP_Post $post      Optional. Posts ID or post object. Default is the global `$post`.
  * @param bool        $leavename Optional. Whether to keep post name or page name. Default false.
  *
  * @return string|false The permalink URL or false if post does not exist.
@@ -111,7 +111,7 @@ function get_the_permalink( $post = 0, $leavename = false ) {
  *
  * @since 1.0.0
  *
- * @param int|WP_Post $post      Optional. Post ID or post object. Default is the global `$post`.
+ * @param int|WP_Post $post      Optional. Posts ID or post object. Default is the global `$post`.
  * @param bool        $leavename Optional. Whether to keep post name or page name. Default false.
  * @return string|false The permalink URL or false if post does not exist.
  */
@@ -247,7 +247,7 @@ function get_permalink( $post = 0, $leavename = false ) {
  *
  * @global WP_Rewrite $wp_rewrite
  *
- * @param int $id         Optional. Post ID. Default uses the global `$post`.
+ * @param int $id         Optional. Posts ID. Default uses the global `$post`.
  * @param bool $leavename Optional, defaults to false. Whether to keep post name. Default false.
  * @param bool $sample    Optional, defaults to false. Is it a sample permalink. Default false.
  * @return string|WP_Error The post permalink.
@@ -305,7 +305,7 @@ function get_post_permalink( $id = 0, $leavename = false, $sample = false ) {
  *
  * @since 1.5.0
  *
- * @param int|WP_Post $post      Optional. Post ID or object. Default uses the global `$post`.
+ * @param int|WP_Post $post      Optional. Posts ID or object. Default uses the global `$post`.
  * @param bool        $leavename Optional. Whether to keep the page name. Default false.
  * @param bool        $sample    Optional. Whether it should be treated as a sample permalink.
  *                               Default false.
@@ -341,7 +341,7 @@ function get_page_link( $post = false, $leavename = false, $sample = false ) {
  *
  * @global WP_Rewrite $wp_rewrite
  *
- * @param int|WP_Post $post      Optional. Post ID or object. Default uses the global `$post`.
+ * @param int|WP_Post $post      Optional. Posts ID or object. Default uses the global `$post`.
  * @param bool        $leavename Optional. Whether to keep the page name. Default false.
  * @param bool        $sample    Optional. Whether it should be treated as a sample permalink.
  *                               Default false.
@@ -387,7 +387,7 @@ function _get_page_link( $post = false, $leavename = false, $sample = false ) {
  *
  * @global WP_Rewrite $wp_rewrite
  *
- * @param int|object $post      Optional. Post ID or object. Default uses the global `$post`.
+ * @param int|object $post      Optional. Posts ID or object. Default uses the global `$post`.
  * @param bool       $leavename Optional. Whether to keep the page name. Default false.
  * @return string The attachment permalink.
  */
@@ -626,7 +626,7 @@ function get_feed_link( $feed = '' ) {
  *
  * @since 2.2.0
  *
- * @param int    $post_id Optional. Post ID. Default is the ID of the global `$post`.
+ * @param int    $post_id Optional. Posts ID. Default is the ID of the global `$post`.
  * @param string $feed    Optional. Feed type. Default empty.
  * @return string The permalink for the comments feed for the given post.
  */
@@ -675,7 +675,7 @@ function get_post_comments_feed_link( $post_id = 0, $feed = '' ) {
 	 *
 	 * @since 1.5.1
 	 *
-	 * @param string $url Post comments feed permalink.
+	 * @param string $url Posts comments feed permalink.
 	 */
 	return apply_filters( 'post_comments_feed_link', $url );
 }
@@ -690,7 +690,7 @@ function get_post_comments_feed_link( $post_id = 0, $feed = '' ) {
  * @since 2.5.0
  *
  * @param string $link_text Optional. Descriptive link text. Default 'Comments Feed'.
- * @param int    $post_id   Optional. Post ID. Default is the ID of the global `$post`.
+ * @param int    $post_id   Optional. Posts ID. Default is the ID of the global `$post`.
  * @param string $feed      Optional. Feed format. Default empty.
  */
 function post_comments_feed_link( $link_text = '', $post_id = '', $feed = '' ) {
@@ -706,7 +706,7 @@ function post_comments_feed_link( $link_text = '', $post_id = '', $feed = '' ) {
 	 * @since 2.8.0
 	 *
 	 * @param string $link    The complete anchor tag for the comment feed link.
-	 * @param int    $post_id Post ID.
+	 * @param int    $post_id Posts ID.
 	 * @param string $feed    The feed type, or an empty string for the default feed type.
 	 */
 	echo apply_filters( 'post_comments_feed_link_html', $link, $post_id, $feed );
@@ -1128,7 +1128,7 @@ function get_search_comments_feed_link($search_query = '', $feed = '') {
  *
  * @global WP_Rewrite $wp_rewrite
  *
- * @param string $post_type Post type.
+ * @param string $post_type Posts type.
  * @return string|false The post type archive permalink.
  */
 function get_post_type_archive_link( $post_type ) {
@@ -1169,7 +1169,7 @@ function get_post_type_archive_link( $post_type ) {
 	 * @since 3.1.0
 	 *
 	 * @param string $link      The post type archive permalink.
-	 * @param string $post_type Post type name.
+	 * @param string $post_type Posts type name.
 	 */
 	return apply_filters( 'post_type_archive_link', $link, $post_type );
 }
@@ -1179,7 +1179,7 @@ function get_post_type_archive_link( $post_type ) {
  *
  * @since 3.1.0
  *
- * @param string $post_type Post type
+ * @param string $post_type Posts type
  * @param string $feed      Optional. Feed type. Default empty.
  * @return string|false The post type feed permalink.
  */
@@ -1219,7 +1219,7 @@ function get_post_type_archive_feed_link( $post_type, $feed = '' ) {
  *
  * @since 4.4.0
  *
- * @param int|WP_Post $post         Optional. Post ID or `WP_Post` object. Defaults to global `$post`.
+ * @param int|WP_Post $post         Optional. Posts ID or `WP_Post` object. Defaults to global `$post`.
  * @param array       $query_args   Optional. Array of additional query args to be appended to the link.
  *                                  Default empty array.
  * @param string      $preview_link Optional. Base preview link to be used if it should differ from the
@@ -1249,7 +1249,7 @@ function get_preview_post_link( $post = null, $query_args = array(), $preview_li
 	 * @since 4.0.0 Added the `$post` parameter.
 	 *
 	 * @param string  $preview_link URL used for the post preview.
-	 * @param WP_Post $post         Post object.
+	 * @param WP_Post $post         Posts object.
 	 */
 	return apply_filters( 'preview_post_link', $preview_link, $post );
 }
@@ -1262,7 +1262,7 @@ function get_preview_post_link( $post = null, $query_args = array(), $preview_li
  *
  * @since 2.3.0
  *
- * @param int    $id      Optional. Post ID. Default is the ID of the global `$post`.
+ * @param int    $id      Optional. Posts ID. Default is the ID of the global `$post`.
  * @param string $context Optional. How to output the '&' character. Default '&amp;'.
  * @return string|null The edit post link for the given post. null if the post type is invalid or does
  *                     not allow an editing UI.
@@ -1297,7 +1297,7 @@ function get_edit_post_link( $id = 0, $context = 'display' ) {
 	 * @since 2.3.0
 	 *
 	 * @param string $link    The edit link.
-	 * @param int    $post_id Post ID.
+	 * @param int    $post_id Posts ID.
 	 * @param string $context The link context. If set to 'display' then ampersands
 	 *                        are encoded.
 	 */
@@ -1313,7 +1313,7 @@ function get_edit_post_link( $id = 0, $context = 'display' ) {
  * @param string $text   Optional. Anchor text. If null, default is 'Edit This'. Default null.
  * @param string $before Optional. Display before edit link. Default empty.
  * @param string $after  Optional. Display after edit link. Default empty.
- * @param int    $id     Optional. Post ID. Default is the ID of the global `$post`.
+ * @param int    $id     Optional. Posts ID. Default is the ID of the global `$post`.
  * @param string $class  Optional. Add custom class to link. Default 'post-edit-link'.
  */
 function edit_post_link( $text = null, $before = '', $after = '', $id = 0, $class = 'post-edit-link' ) {
@@ -1337,7 +1337,7 @@ function edit_post_link( $text = null, $before = '', $after = '', $id = 0, $clas
 	 * @since 2.3.0
 	 *
 	 * @param string $link    Anchor tag for the edit link.
-	 * @param int    $post_id Post ID.
+	 * @param int    $post_id Posts ID.
 	 * @param string $text    Anchor text.
 	 */
 	echo $before . apply_filters( 'edit_post_link', $link, $post->ID, $text ) . $after;
@@ -1350,7 +1350,7 @@ function edit_post_link( $text = null, $before = '', $after = '', $id = 0, $clas
  *
  * @since 2.9.0
  *
- * @param int    $id           Optional. Post ID. Default is the ID of the global `$post`.
+ * @param int    $id           Optional. Posts ID. Default is the ID of the global `$post`.
  * @param string $deprecated   Not used.
  * @param bool   $force_delete Optional. Whether to bypass trash and force deletion. Default false.
  * @return string|void The delete post link URL for the given post.
@@ -1379,7 +1379,7 @@ function get_delete_post_link( $id = 0, $deprecated = '', $force_delete = false 
 	 * @since 2.9.0
 	 *
 	 * @param string $link         The delete link.
-	 * @param int    $post_id      Post ID.
+	 * @param int    $post_id      Posts ID.
 	 * @param bool   $force_delete Whether to bypass the trash and force deletion. Default false.
 	 */
 	return apply_filters( 'get_delete_post_link', wp_nonce_url( $delete_link, "$action-post_{$post->ID}" ), $post->ID, $force_delete );
@@ -1550,7 +1550,7 @@ function get_edit_user_link( $user_id = null ) {
  * @param bool         $in_same_term   Optional. Whether post should be in a same taxonomy term. Default false.
  * @param array|string $excluded_terms Optional. Array or comma-separated list of excluded term IDs. Default empty.
  * @param string       $taxonomy       Optional. Taxonomy, if $in_same_term is true. Default 'category'.
- * @return null|string|WP_Post Post object if successful. Null if global $post is not set. Empty string if no
+ * @return null|string|WP_Post Posts object if successful. Null if global $post is not set. Empty string if no
  *                             corresponding post exists.
  */
 function get_previous_post( $in_same_term = false, $excluded_terms = '', $taxonomy = 'category' ) {
@@ -1565,7 +1565,7 @@ function get_previous_post( $in_same_term = false, $excluded_terms = '', $taxono
  * @param bool         $in_same_term   Optional. Whether post should be in a same taxonomy term. Default false.
  * @param array|string $excluded_terms Optional. Array or comma-separated list of excluded term IDs. Default empty.
  * @param string       $taxonomy       Optional. Taxonomy, if $in_same_term is true. Default 'category'.
- * @return null|string|WP_Post Post object if successful. Null if global $post is not set. Empty string if no
+ * @return null|string|WP_Post Posts object if successful. Null if global $post is not set. Empty string if no
  *                             corresponding post exists.
  */
 function get_next_post( $in_same_term = false, $excluded_terms = '', $taxonomy = 'category' ) {
@@ -1585,7 +1585,7 @@ function get_next_post( $in_same_term = false, $excluded_terms = '', $taxonomy =
  * @param array|string $excluded_terms Optional. Array or comma-separated list of excluded term IDs. Default empty.
  * @param bool         $previous       Optional. Whether to retrieve previous post. Default true
  * @param string       $taxonomy       Optional. Taxonomy, if $in_same_term is true. Default 'category'.
- * @return null|string|WP_Post Post object if successful. Null if global $post is not set. Empty string if no
+ * @return null|string|WP_Post Posts object if successful. Null if global $post is not set. Empty string if no
  *                             corresponding post exists.
  */
 function get_adjacent_post( $in_same_term = false, $excluded_terms = '', $previous = true, $taxonomy = 'category' ) {
@@ -1776,7 +1776,7 @@ function get_adjacent_post_rel_link( $title = '%title', $in_same_term = false, $
 	$post_title = the_title_attribute( array( 'echo' => false, 'post' => $post ) );
 
 	if ( empty( $post_title ) )
-		$post_title = $previous ? __( 'Previous Post' ) : __( 'Next Post' );
+		$post_title = $previous ? __( 'Previous Posts' ) : __( 'Next Posts' );
 
 	$date = mysql2date( get_option( 'date_format' ), $post->post_date );
 
@@ -2018,7 +2018,7 @@ function get_adjacent_post_link( $format, $link, $in_same_term = false, $exclude
 		$title = $post->post_title;
 
 		if ( empty( $post->post_title ) )
-			$title = $previous ? __( 'Previous Post' ) : __( 'Next Post' );
+			$title = $previous ? __( 'Previous Posts' ) : __( 'Next Posts' );
 
 		/** This filter is documented in wp-includes/post-template.php */
 		$title = apply_filters( 'the_title', $title, $post->ID );
@@ -2400,7 +2400,7 @@ function posts_nav_link( $sep = '', $prelabel = '', $nxtlabel = '' ) {
  *     @type bool         $in_same_term       Whether link should be in a same taxonomy term. Default false.
  *     @type array|string $excluded_terms     Array or comma-separated list of excluded term IDs. Default empty.
  *     @type string       $taxonomy           Taxonomy, if `$in_same_term` is true. Default 'category'.
- *     @type string       $screen_reader_text Screen reader text for nav element. Default 'Post navigation'.
+ *     @type string       $screen_reader_text Screen reader text for nav element. Default 'Posts navigation'.
  * }
  * @return string Markup for post links.
  */
@@ -2411,7 +2411,7 @@ function get_the_post_navigation( $args = array() ) {
 		'in_same_term'       => false,
 		'excluded_terms'     => '',
 		'taxonomy'           => 'category',
-		'screen_reader_text' => __( 'Post navigation' ),
+		'screen_reader_text' => __( 'Posts navigation' ),
 	) );
 
 	$navigation = '';
@@ -3544,7 +3544,7 @@ function get_edit_profile_url( $user_id = 0, $scheme = 'admin' ) {
  *
  * @since 4.6.0
  *
- * @param int|WP_Post $post Optional. Post ID or object. Default is global `$post`.
+ * @param int|WP_Post $post Optional. Posts ID or object. Default is global `$post`.
  * @return string|false The canonical URL, or false if the post does not exist or has not
  *                      been published yet.
  */
@@ -3584,7 +3584,7 @@ function wp_get_canonical_url( $post = null ) {
 	 * @since 4.6.0
 	 *
 	 * @param string  $string The post's canonical URL.
-	 * @param WP_Post $post   Post object.
+	 * @param WP_Post $post   Posts object.
 	 */
 	return apply_filters( 'get_canonical_url', $canonical_url, $post );
 }
@@ -3643,7 +3643,7 @@ function wp_get_shortlink( $id = 0, $context = 'post', $allow_slugs = true ) {
 	 * @since 3.0.0
 	 *
 	 * @param bool|string $return      Short-circuit return value. Either false or a URL string.
-	 * @param int         $id          Post ID, or 0 for the current post.
+	 * @param int         $id          Posts ID, or 0 for the current post.
 	 * @param string      $context     The context for the link. One of 'post' or 'query',
 	 * @param bool        $allow_slugs Whether to allow post slugs in the shortlink.
 	 */
@@ -3682,7 +3682,7 @@ function wp_get_shortlink( $id = 0, $context = 'post', $allow_slugs = true ) {
 	 * @since 3.0.0
 	 *
 	 * @param string $shortlink   Shortlink URL.
-	 * @param int    $id          Post ID, or 0 for the current post.
+	 * @param int    $id          Posts ID, or 0 for the current post.
 	 * @param string $context     The context for the link. One of 'post' or 'query',
 	 * @param bool   $allow_slugs Whether to allow post slugs in the shortlink. Not used by default.
 	 */
@@ -3939,7 +3939,7 @@ function get_avatar_data( $id_or_email, $args = null ) {
 		// User Object
 		$user = $id_or_email;
 	} elseif ( $id_or_email instanceof WP_Post ) {
-		// Post Object
+		// Posts Object
 		$user = get_user_by( 'id', (int) $id_or_email->post_author );
 	} elseif ( $id_or_email instanceof WP_Comment ) {
 		/**

@@ -375,7 +375,7 @@ class WP_Users_List_Table extends WP_List_Table {
 	 * @param object $user_object The current user object.
 	 * @param string $style       Deprecated. Not used.
 	 * @param string $role        Deprecated. Not used.
-	 * @param int    $numposts    Optional. Post count to display for this user. Defaults
+	 * @param int    $numposts    Optional. Posts count to display for this user. Defaults
 	 *                            to zero, as in, a new user has made zero posts.
 	 * @return string Output for a single row.
 	 */

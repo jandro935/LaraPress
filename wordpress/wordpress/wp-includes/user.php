@@ -751,7 +751,7 @@ function is_user_member_of_blog( $user_id = 0, $blog_id = 0 ) {
 /**
  * Add meta data field to a user.
  *
- * Post meta data is called "Custom Fields" on the Administration Screens.
+ * Posts meta data is called "Custom Fields" on the Administration Screens.
  *
  * @since 3.0.0
  * @link https://codex.wordpress.org/Function_Reference/add_user_meta

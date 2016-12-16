@@ -25,7 +25,7 @@ require_once( ABSPATH . 'wp-admin/includes/class-wp-internal-pointers.php' );
  *
  * @see wp_terms_checklist()
  *
- * @param int    $post_id              Optional. Post to generate a categories checklist for. Default 0.
+ * @param int    $post_id              Optional. Posts to generate a categories checklist for. Default 0.
  *                                     $selected_cats must not be an array. Default 0.
  * @param int    $descendants_and_self Optional. ID of the category to output along with its descendants.
  *                                     Default 0.
@@ -56,7 +56,7 @@ function wp_category_checklist( $post_id = 0, $descendants_and_self = 0, $select
  * @since 3.0.0
  * @since 4.4.0 Introduced the `$echo` argument.
  *
- * @param int          $post_id Optional. Post ID. Default 0.
+ * @param int          $post_id Optional. Posts ID. Default 0.
  * @param array|string $args {
  *     Optional. Array or string of arguments for generating a terms checklist. Default empty array.
  *
@@ -148,7 +148,7 @@ function wp_terms_checklist( $post_id = 0, $args = array() ) {
 	$output = '';
 
 	if ( $r['checked_ontop'] ) {
-		// Post process $categories rather than adding an exclude to the get_terms() query to keep the query the same across all posts (for any query cache)
+		// Posts process $categories rather than adding an exclude to the get_terms() query to keep the query the same across all posts (for any query cache)
 		$checked_categories = array();
 		$keys = array_keys( $categories );
 
@@ -266,7 +266,7 @@ function wp_link_category_checklist( $link_id = 0 ) {
  *
  * @since 2.7.0
  *
- * @param WP_Post $post Post object.
+ * @param WP_Post $post Posts object.
  */
 function get_inline_data($post) {
 	$post_type_object = get_post_type_object($post->post_type);
@@ -765,7 +765,7 @@ function touch_time( $edit = 1, $for_post = 1, $tab_index = 0, $multi = 0 ) {
  * @since 4.7.0 Added the `$post_type` parameter.
  *
  * @param string $default   Optional. The template file name. Default empty.
- * @param string $post_type Optional. Post type to get templates for. Default 'post'.
+ * @param string $post_type Optional. Posts type to get templates for. Default 'post'.
  */
 function page_template_dropdown( $default = '', $post_type = 'page' ) {
 	$templates = get_page_templates( null, $post_type );
@@ -787,7 +787,7 @@ function page_template_dropdown( $default = '', $post_type = 'page' ) {
  * @param int         $default Optional. The default page ID to be pre-selected. Default 0.
  * @param int         $parent  Optional. The parent page ID. Default 0.
  * @param int         $level   Optional. Page depth level. Default 0.
- * @param int|WP_Post $post    Post ID or WP_Post object.
+ * @param int|WP_Post $post    Posts ID or WP_Post object.
  *
  * @return null|false Boolean False if page has no children, otherwise print out html elements
  */
@@ -893,7 +893,7 @@ function wp_import_upload_form( $action ) {
  *                                              is the current screen.
  * @param string                 $context       Optional. The context within the screen where the boxes
  *                                              should display. Available contexts vary from screen to
- *                                              screen. Post edit screen contexts include 'normal', 'side',
+ *                                              screen. Posts edit screen contexts include 'normal', 'side',
  *                                              and 'advanced'. Comments screen contexts include 'normal'
  *                                              and 'side'. Menus meta boxes (accordion sections) all use
  *                                              the 'side' context. Global default is 'advanced'.
@@ -1072,7 +1072,7 @@ function do_meta_boxes( $screen, $context, $object ) {
  *                                        post type, 'link', or 'comment'). Accepts a single screen ID,
  *                                        WP_Screen object, or array of screen IDs.
  * @param string                 $context The context within the screen where the box is set to display.
- *                                        Contexts vary from screen to screen. Post edit screen contexts
+ *                                        Contexts vary from screen to screen. Posts edit screen contexts
  *                                        include 'normal', 'side', and 'advanced'. Comments screen contexts
  *                                        include 'normal' and 'side'. Menus meta boxes (accordion sections)
  *                                        all use the 'side' context.
@@ -1544,7 +1544,7 @@ function the_post_password() {
  *
  * @since 2.7.0
  *
- * @param int|WP_Post $post Optional. Post ID or WP_Post object. Default is global $post.
+ * @param int|WP_Post $post Optional. Posts ID or WP_Post object. Default is global $post.
  * @return string The post title if set.
  */
 function _draft_or_post_title( $post = 0 ) {

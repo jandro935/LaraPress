@@ -177,7 +177,7 @@ include( ABSPATH . 'wp-admin/admin-header.php' );
 
 			<div class="under-the-hood three-col">
 				<div class="col">
-					<h3><a href="https://make.wordpress.org/core/2016/11/03/post-type-templates-in-4-7/"><?php _e( 'Post Type Templates' ); ?></a></h3>
+					<h3><a href="https://make.wordpress.org/core/2016/11/03/post-type-templates-in-4-7/"><?php _e( 'Posts Type Templates' ); ?></a></h3>
 					<p><?php _e( 'By opening up the page template functionality to all post types, theme developers have even more flexibility with the WordPress template hierarchy.' ); ?></p>
 				</div>
 				<div class="col">

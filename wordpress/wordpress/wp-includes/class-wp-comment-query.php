@@ -220,15 +220,15 @@ class WP_Comment_Query {
 	 *                                                   Default empty.
 	 *     @type array        $post__not_in              Array of post IDs to exclude affiliated comments for.
 	 *                                                   Default empty.
-	 *     @type int          $post_author               Post author ID to limit results by. Default empty.
-	 *     @type string|array $post_status               Post status or array of post statuses to retrieve
+	 *     @type int          $post_author               Posts author ID to limit results by. Default empty.
+	 *     @type string|array $post_status               Posts status or array of post statuses to retrieve
 	 *                                                   affiliated comments for. Pass 'any' to match any value.
 	 *                                                   Default empty.
-	 *     @type string       $post_type                 Post type or array of post types to retrieve affiliated
+	 *     @type string       $post_type                 Posts type or array of post types to retrieve affiliated
 	 *                                                   comments for. Pass 'any' to match any value. Default empty.
-	 *     @type string       $post_name                 Post name to retrieve affiliated comments for.
+	 *     @type string       $post_name                 Posts name to retrieve affiliated comments for.
 	 *                                                   Default empty.
-	 *     @type int          $post_parent               Post parent ID to retrieve affiliated comments for.
+	 *     @type int          $post_parent               Posts parent ID to retrieve affiliated comments for.
 	 *                                                   Default empty.
 	 *     @type string       $search                    Search term(s) to retrieve matching comments for.
 	 *                                                   Default empty.

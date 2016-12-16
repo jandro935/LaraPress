@@ -743,7 +743,7 @@ function wp_setup_nav_menu_item( $menu_item ) {
 					$post_type_description = '';
 				}
 
-				$menu_item->type_label = __( 'Post Type Archive' );
+				$menu_item->type_label = __( 'Posts Type Archive' );
 				$post_content = wp_trim_words( $menu_item->post_content, 200 );
 				$post_type_description = '' == $post_content ? $post_type_description : $post_content;
 				$menu_item->url = get_post_type_archive_link( $menu_item->object );

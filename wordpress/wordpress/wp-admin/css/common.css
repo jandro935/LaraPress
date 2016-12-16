@@ -3821,7 +3821,7 @@ img {
 		padding-top: 46px;
 	}
 
-	/* Keep full-width boxes on Edit Post page from causing horizontal scroll */
+	/* Keep full-width boxes on Edit Posts page from causing horizontal scroll */
 	div#post-body.metabox-holder.columns-1 {
 		overflow-x: hidden;
 	}

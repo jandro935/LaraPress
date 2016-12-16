@@ -73,7 +73,7 @@ msgid "By opening up the page template functionality to all post types, theme de
 msgstr "Al abrir la funcionalidad de plantilla de página a todos los tipos de contenido, los desarrolladores de temas tienen aún más flexibilidad con la jerarquía de plantillas de WordPress."
 
 #: wp-admin/about.php:180
-msgid "Post Type Templates"
+msgid "Posts Type Templates"
 msgstr "Plantillas de tipos de entradas"
 
 #. translators: %s: smiling face with smiling eyes emoji
@@ -1763,19 +1763,19 @@ msgid "Page published."
 msgstr "Página publicada."
 
 #: wp-admin/edit-form-advanced.php:147
-msgid "Post draft updated."
+msgid "Posts draft updated."
 msgstr "Borrador de entrada actualizado."
 
 #: wp-admin/edit-form-advanced.php:146
-msgid "Post scheduled for: %s."
+msgid "Posts scheduled for: %s."
 msgstr "Entrada programada el: %s."
 
 #: wp-admin/edit-form-advanced.php:145
-msgid "Post submitted."
+msgid "Posts submitted."
 msgstr "Entrada enviada."
 
 #: wp-admin/edit-form-advanced.php:143
-msgid "Post published."
+msgid "Posts published."
 msgstr "Entrada publicada."
 
 #: wp-admin/edit-form-advanced.php:127
@@ -1989,7 +1989,7 @@ msgid "https://codex.wordpress.org/First_Steps_With_WordPress"
 msgstr "https://codex.wordpress.org/First_Steps_With_WordPress"
 
 #: wp-admin/edit-form-advanced.php:437
-msgid "<strong>Format</strong> &mdash; Post Formats designate how your theme will display a specific post. For example, you could have a <em>standard</em> blog post with a title and paragraphs, or a short <em>aside</em> that omits the title and contains a short text blurb. Please refer to the Codex for <a href=\"https://codex.wordpress.org/Post_Formats#Supported_Formats\">descriptions of each post format</a>. Your theme could enable all or some of 10 possible formats."
+msgid "<strong>Format</strong> &mdash; Posts Formats designate how your theme will display a specific post. For example, you could have a <em>standard</em> blog post with a title and paragraphs, or a short <em>aside</em> that omits the title and contains a short text blurb. Please refer to the Codex for <a href=\"https://codex.wordpress.org/Post_Formats#Supported_Formats\">descriptions of each post format</a>. Your theme could enable all or some of 10 possible formats."
 msgstr "<strong>Formato</strong> &mdash; Los formatos de entrada designan cómo tu tema mostrará una entrada específica. Por ejemplo, puedes tener una entrada de blog <em>Estándar</em> con título y párrafos, o una breve <em>Minientrada</em> que omita el título y contenga solo una breve nota de texto. Por favor, revisa el Codex para ver las <a href=\"https://codex.wordpress.org/Post_Formats#Supported_Formats\">descripciones de cada formato de entrada</a>. Puede que tu tema active todos o solo alguno de los 10 posibles formatos."
 
 #: wp-admin/options-writing.php:177
@@ -2564,7 +2564,7 @@ msgstr "¡Deberías actualizar <a href=\"%s\" target=\"_blank\">tus marcadores</
 
 #: wp-admin/includes/class-wp-press-this.php:1376
 #: wp-admin/includes/class-wp-press-this.php:1377
-msgid "Post title"
+msgid "Posts title"
 msgstr "Título de la entrada"
 
 #: wp-admin/includes/class-wp-press-this.php:1381
@@ -2814,7 +2814,7 @@ msgid "https://planet.wordpress.org/feed/"
 msgstr "https://planet.wordpress.org/feed/"
 
 #: wp-admin/edit-form-advanced.php:366
-msgid "<strong>Post editor</strong> &mdash; Enter the text for your post. There are two modes of editing: Visual and Text. Choose the mode by clicking on the appropriate tab."
+msgid "<strong>Posts editor</strong> &mdash; Enter the text for your post. There are two modes of editing: Visual and Text. Choose the mode by clicking on the appropriate tab."
 msgstr "<strong>Editor de entradas</strong> &mdash; Introduce el texto para tu entrada. Hay dos modos de editar: Visual y Texto. Elige el modo haciendo clic en la pestaña correspondiente."
 
 #: wp-admin/edit-form-advanced.php:369
@@ -3288,7 +3288,7 @@ msgstr[0] "%s página"
 msgstr[1] "%s páginas"
 
 #: wp-admin/includes/dashboard.php:258
-msgid "%s Post"
+msgid "%s Posts"
 msgid_plural "%s Posts"
 msgstr[0] "%s entrada"
 msgstr[1] "%s entradas"
@@ -3908,7 +3908,7 @@ msgctxt "revisions"
 msgid "Browse"
 msgstr "Explora"
 
-#. translators: Post revisions heading. 1: The number of available revisions
+#. translators: Posts revisions heading. 1: The number of available revisions
 #: wp-admin/includes/meta-boxes.php:202
 msgid "Revisions: %s"
 msgstr "Revisiones: %s"
@@ -4225,7 +4225,7 @@ msgstr "Restaurar la copia de seguridad."
 msgid "The backup of this post in your browser is different from the version below."
 msgstr "La copia de seguridad de esta entrada de tu navegador es diferente de la versión que hay en la parte inferior."
 
-#. translators: 1: Post creation date, 2: Post creation time
+#. translators: 1: Posts creation date, 2: Posts creation time
 #: wp-admin/includes/ajax-actions.php:1252
 msgid "Draft created on %1$s at %2$s"
 msgstr "Borrador creado el %1$s a las %2$s"
@@ -4336,7 +4336,7 @@ msgid "Inserting Media"
 msgstr "Insertando multimedia"
 
 #: wp-admin/edit-form-advanced.php:357
-msgid "The title field and the big Post Editing Area are fixed in place, but you can reposition all the other boxes using drag and drop. You can also minimize or expand them by clicking the title bar of each box. Use the Screen Options tab to unhide more boxes (Excerpt, Send Trackbacks, Custom Fields, Discussion, Slug, Author) or to choose a 1- or 2-column layout for this screen."
+msgid "The title field and the big Posts Editing Area are fixed in place, but you can reposition all the other boxes using drag and drop. You can also minimize or expand them by clicking the title bar of each box. Use the Screen Options tab to unhide more boxes (Excerpt, Send Trackbacks, Custom Fields, Discussion, Slug, Author) or to choose a 1- or 2-column layout for this screen."
 msgstr "El campo de título y el área de edición de la entrada son fijos, pero puedes recolocar el resto de cajas arrastrando y soltando. También puedes minimizarlas o expandirlas haciendo clic en la barra de título de cada caja. Usa la pestaña de Opciones de pantalla para desvelar más cajas (Extracto, Enviar trackbacks, campos personalizados, comenetarios, slug, autor) o elige una disposición a 1 o 2 columnas para esta pantalla. "
 
 #: wp-admin/custom-header.php:122
@@ -4409,7 +4409,7 @@ msgid "File URL:"
 msgstr "URL archivo:"
 
 #: wp-admin/edit-comments.php:174
-msgid "In the <strong>In Response To</strong> column, there are three elements. The text is the name of the post that inspired the comment, and links to the post editor for that entry. The View Post link leads to that post on your live site. The small bubble with the number in it shows the number of approved comments that post has received. If there are pending comments, a red notification circle with the number of pending comments is displayed. Clicking the notification circle will filter the comments screen to show only pending comments on that post."
+msgid "In the <strong>In Response To</strong> column, there are three elements. The text is the name of the post that inspired the comment, and links to the post editor for that entry. The View Posts link leads to that post on your live site. The small bubble with the number in it shows the number of approved comments that post has received. If there are pending comments, a red notification circle with the number of pending comments is displayed. Clicking the notification circle will filter the comments screen to show only pending comments on that post."
 msgstr "En la columna <strong>En respuesta a</strong>  hay tres elementos. El texto es el nombre de la entrada que inspiró el comentario, y los enlaces al editor para esa entrada. El enlace de Ver entrada te lleva a esa entrada en tu sitio. La pequeña burbuja con números muestra la cantidad de comentarios aprobados que ha recibido esa entrada. Si la burbuja es gris has aprobado todos los comentarios de esa entrada. Si es azul hay comentarios pendientes. Haciendo clic en la burbuja filtrará la pantalla de comentarios para mostrar solo los comentarios de esa entrada."
 
 #. translators: 1: user id, 2: user login
@@ -4661,7 +4661,7 @@ msgid "You can select an image to be shown at the top of your site by uploading 
 msgstr "Puedes elegir una imagen para que se muestre en la parte superior de tu sitio subiéndola desde tu ordenador o eligiéndola de tu biblioteca multimedia. Después de elegir una imagen podrás recortarla."
 
 #: wp-admin/edit-form-advanced.php:387
-msgid "Creating a Page is very similar to creating a Post, and the screens can be customized in the same way using drag and drop, the Screen Options tab, and expanding/collapsing boxes as you choose. This screen also has the distraction-free writing space, available in both the Visual and Text modes via the Fullscreen buttons. The Page editor mostly works the same as the Post editor, but there are some Page-specific features in the Page Attributes box."
+msgid "Creating a Page is very similar to creating a Posts, and the screens can be customized in the same way using drag and drop, the Screen Options tab, and expanding/collapsing boxes as you choose. This screen also has the distraction-free writing space, available in both the Visual and Text modes via the Fullscreen buttons. The Page editor mostly works the same as the Posts editor, but there are some Page-specific features in the Page Attributes box."
 msgstr "Crear una página es muy parecido a crear una entrada, y puedes personalizar las pantallas de igual modo, arrastrando y soltando, en la pestaña de Opciones de pantalla, y expandiendo /contrayendo las cajas a voluntad. Esta pantalla también dispone del espacio de escritura sin distracciones, disponible tanto en los modos visual como de texto a través de los botones de pantalla completa. El editor de páginas funciona prácticamente igual que el editor de entradas, pero hay algunas características específicas para páginas en la caja de atributos de página."
 
 #: wp-admin/edit-tags.php:225
@@ -5321,7 +5321,7 @@ msgid "There are unsaved changes that will be lost. 'OK' to continue, 'Cancel' t
 msgstr "Hay cambios sin guardar que se perderán. 'Aceptar' para continuar, 'Cancelar' para volver a editor de imágenes."
 
 #: wp-admin/options-writing.php:30
-msgid "Post via email settings allow you to send your WordPress install an email with the content of your post. You must set up a secret email account with POP3 access to use this, and any mail received at this address will be posted, so it&#8217;s a good idea to keep this address very secret."
+msgid "Posts via email settings allow you to send your WordPress install an email with the content of your post. You must set up a secret email account with POP3 access to use this, and any mail received at this address will be posted, so it&#8217;s a good idea to keep this address very secret."
 msgstr "Las opciones de publicar por correo electrónico te permiten enviar a tu instalación de WordPress el contenido de tu entrada. Tienes que crear una cuenta de correo electrónico secreta con acceso POP3 para poder hacerlo. Cualquier correo recibido en esa cuenta será publicado, por lo que conviene mantener esa cuenta muy secreta."
 
 #: wp-admin/users.php:42
@@ -5580,7 +5580,7 @@ msgid "If desired, WordPress will automatically alert various services of your n
 msgstr "Si lo deseas, WordPress puede alertar automáticamente a varios servicios de tus nuevos artículos."
 
 #: wp-admin/options-writing.php:29
-msgid "Post Via Email"
+msgid "Posts Via Email"
 msgstr "Publicar por Correo Electrónico"
 
 #: wp-admin/options-discussion.php:22
@@ -5781,7 +5781,7 @@ msgid "The package could not be installed."
 msgstr "No se ha podido descomprimir el paquete."
 
 #: wp-admin/includes/media.php:1081
-msgid "Attachment Post URL"
+msgid "Attachment Posts URL"
 msgstr "URL del adjunto a la entrada"
 
 #: wp-admin/menu.php:63
@@ -6081,7 +6081,7 @@ msgid "Updates %s"
 msgstr "Actualizaciones %s"
 
 #: wp-admin/edit-form-advanced.php:375
-msgid "Title and Post Editor"
+msgid "Title and Posts Editor"
 msgstr "Título y editor de entradas"
 
 #: wp-admin/edit-form-advanced.php:361
@@ -6108,7 +6108,7 @@ msgid "sample-post"
 msgstr "pagina-ejemplo"
 
 #: wp-admin/options-permalink.php:197
-msgid "Post name"
+msgid "Posts name"
 msgstr "Nombre de la entrada"
 
 #. translators: URL to wp-admin/import.php
@@ -6155,7 +6155,7 @@ msgstr "Imágenes destacadas"
 
 #: wp-admin/includes/class-wp-press-this.php:823
 #: wp-admin/includes/meta-boxes.php:385 wp-admin/includes/theme.php:263
-msgid "Post Formats"
+msgid "Posts Formats"
 msgstr "Formatos de entradas"
 
 #: wp-admin/includes/theme.php:261
@@ -6387,7 +6387,7 @@ msgid "Add Existing"
 msgstr "Añadir usuario existente"
 
 #: wp-admin/options-writing.php:83
-msgid "Default Post Format"
+msgid "Default Posts Format"
 msgstr "Formato de entrada por defecto"
 
 #: wp-admin/plugin-editor.php:150 wp-admin/theme-editor.php:34
@@ -8029,7 +8029,7 @@ msgstr "Editar temas"
 msgid "Tags:"
 msgstr "Etiquetas:"
 
-#. translators: 1: Post title
+#. translators: 1: Posts title
 #: wp-admin/revision.php:78
 msgid "Compare Revisions of &#8220;%1$s&#8221;"
 msgstr "Comparar revisiones de &#8220;%s&#8221;"
@@ -8234,7 +8234,7 @@ msgid "To post to WordPress by email you must set up a secret email account with
 msgstr "Para publicar entradas por correo electrónico debes configurar una cuenta de correo electrónico secreta con acceso POP3. Cualquier correo electrónico recibido en esa dirección se publicará, así que es una buena idea mantener esta cuenta de correo muy en secreto. Aquí tienes tres cadenas aleatorias que puedes usar: %1$s, %2$s, %3$s."
 
 #: wp-admin/options-writing.php:116
-msgid "Post via email"
+msgid "Posts via email"
 msgstr "Publicar via correo electrónico"
 
 #: wp-admin/options-writing.php:97
@@ -8242,7 +8242,7 @@ msgid "Default Link Category"
 msgstr "Categoría predeterminada para enlaces"
 
 #: wp-admin/options-writing.php:71
-msgid "Default Post Category"
+msgid "Default Posts Category"
 msgstr "Categoría predeterminada para las entradas"
 
 #: wp-admin/options-writing.php:66
@@ -8920,7 +8920,7 @@ msgid "Microformats"
 msgstr "Microformatos"
 
 #: wp-admin/includes/theme.php:265
-msgid "Sticky Post"
+msgid "Sticky Posts"
 msgstr "Entrada fija"
 
 #: wp-admin/includes/theme.php:267
@@ -9550,13 +9550,13 @@ msgstr "+ Añadir categoría nueva "
 msgid "Most Used"
 msgstr "Más utilizadas"
 
-#. translators: Post date information. 1: Date on which the post is to be
+#. translators: Posts date information. 1: Date on which the post is to be
 #. published
 #: wp-admin/includes/meta-boxes.php:190
 msgid "Publish on: <b>%1$s</b>"
 msgstr "Publicar el: <b>%1$s</b>"
 
-#. translators: Post date information. 1: Date on which the post is to be
+#. translators: Posts date information. 1: Date on which the post is to be
 #. published
 #: wp-admin/includes/meta-boxes.php:187
 msgid "Schedule for: <b>%1$s</b>"
@@ -9566,12 +9566,12 @@ msgstr "Programar para:<b>%1$s</b>"
 msgid "Publish <b>immediately</b>"
 msgstr "Publicar <b>inmediatamente</b>"
 
-#. translators: Post date information. 1: Date on which the post was published
+#. translators: Posts date information. 1: Date on which the post was published
 #: wp-admin/includes/meta-boxes.php:182
 msgid "Published on: <b>%1$s</b>"
 msgstr "Publicada el: <b>%1$s</b>"
 
-#. translators: Post date information. 1: Date on which the post is currently
+#. translators: Posts date information. 1: Date on which the post is currently
 #. scheduled to be published
 #: wp-admin/includes/meta-boxes.php:179
 msgid "Scheduled for: <b>%1$s</b>"
@@ -9686,7 +9686,7 @@ msgstr "Añadir archivos desde tu ordenador"
 
 #: wp-admin/includes/media.php:1493 wp-admin/includes/media.php:2619
 #: wp-admin/includes/media.php:2625
-msgid "Insert into Post"
+msgid "Insert into Posts"
 msgstr "Insertar en la entrada"
 
 #: wp-admin/includes/media.php:1472
@@ -10013,7 +10013,7 @@ msgid "404 Template"
 msgstr "Error 404 (página no encontrada)"
 
 #: wp-admin/includes/file.php:36
-msgid "Single Post"
+msgid "Single Posts"
 msgstr "Entrada individual"
 
 #: wp-admin/includes/file.php:21
@@ -10578,13 +10578,13 @@ msgstr "Nombre:"
 msgid "Update Comment"
 msgstr "Actualizar comentario"
 
-#. translators: 1: Post edited date, 2: Post edited time
+#. translators: 1: Posts edited date, 2: Posts edited time
 #: wp-admin/edit-form-advanced.php:646 wp-admin/includes/ajax-actions.php:2280
 msgid "Last edited on %1$s at %2$s"
 msgstr "Última edición el %1$s a las %2$s"
 
-#. translators: 1: Name of most recent post author, 2: Post edited date, 3:
-#. Post edited time
+#. translators: 1: Name of most recent post author, 2: Posts edited date, 3:
+#. Posts edited time
 #: wp-admin/edit-form-advanced.php:643 wp-admin/includes/ajax-actions.php:2278
 msgid "Last edited by %1$s on %2$s at %3$s"
 msgstr "Última edición por %1$s el %2$s a las %3$s"
@@ -10620,16 +10620,16 @@ msgid "Page updated."
 msgstr "Página actualizada."
 
 #: wp-admin/edit-form-advanced.php:144
-msgid "Post saved."
+msgid "Posts saved."
 msgstr "Entrada guardada."
 
 #. translators: %s: date and time of the revision
 #: wp-admin/edit-form-advanced.php:142
-msgid "Post restored to revision from %s."
+msgid "Posts restored to revision from %s."
 msgstr "Entrada restaurada a revisión el %s."
 
 #: wp-admin/edit-form-advanced.php:137 wp-admin/edit-form-advanced.php:140
-msgid "Post updated."
+msgid "Posts updated."
 msgstr "Entrada actualizada."
 
 #: wp-admin/edit-form-advanced.php:139 wp-admin/edit-form-advanced.php:153

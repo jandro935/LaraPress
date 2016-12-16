@@ -261,7 +261,7 @@ function redirect_canonical( $requested_url = null, $do_redirect = true ) {
 			}
 		}
 
-		// Post Paging
+		// Posts Paging
 		if ( is_singular() && get_query_var('page') ) {
 			if ( !$redirect_url )
 				$redirect_url = get_permalink( get_queried_object_id() );

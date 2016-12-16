@@ -306,7 +306,7 @@ function wp_nav_menu_item_link_meta_box() {
  *
  * @param string $object Not used.
  * @param array  $box {
- *     Post type menu item meta box arguments.
+ *     Posts type menu item meta box arguments.
  *
  *     @type string       $id       Meta box 'id' attribute.
  *     @type string       $title    Meta box title.

@@ -16,7 +16,7 @@
 }
 
 /*------------------------------------------------------------------------------
-  11.0 - Write/Edit Post Screen
+  11.0 - Write/Edit Posts Screen
 ------------------------------------------------------------------------------*/
 
 #show-comments {
@@ -147,7 +147,7 @@ body.post-new-php .submitbox .submitdelete {
 	margin-top: 3px;
 }
 
-/* Post Screen */
+/* Posts Screen */
 #post-body #normal-sortables {
 	min-height: 50px;
 }
@@ -771,7 +771,7 @@ span.wp-media-buttons-icon:before {
 }
 
 /*------------------------------------------------------------------------------
-  11.4 - Post formats
+  11.4 - Posts formats
 ------------------------------------------------------------------------------*/
 
 .post-state-format {

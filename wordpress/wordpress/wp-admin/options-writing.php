@@ -26,8 +26,8 @@ get_current_screen()->add_help_tab( array(
 if ( apply_filters( 'enable_post_by_email_configuration', true ) ) {
 	get_current_screen()->add_help_tab( array(
 		'id'      => 'options-postemail',
-		'title'   => __( 'Post Via Email' ),
-		'content' => '<p>' . __( 'Post via email settings allow you to send your WordPress install an email with the content of your post. You must set up a secret email account with POP3 access to use this, and any mail received at this address will be posted, so it&#8217;s a good idea to keep this address very secret.' ) . '</p>',
+		'title'   => __( 'Posts Via Email' ),
+		'content' => '<p>' . __( 'Posts via email settings allow you to send your WordPress install an email with the content of your post. You must set up a secret email account with POP3 access to use this, and any mail received at this address will be posted, so it&#8217;s a good idea to keep this address very secret.' ) . '</p>',
 	) );
 }
 
@@ -68,7 +68,7 @@ include( ABSPATH . 'wp-admin/admin-header.php' );
 </tr>
 <?php endif; ?>
 <tr>
-<th scope="row"><label for="default_category"><?php _e('Default Post Category') ?></label></th>
+<th scope="row"><label for="default_category"><?php _e('Default Posts Category') ?></label></th>
 <td>
 <?php
 wp_dropdown_categories(array('hide_empty' => 0, 'name' => 'default_category', 'orderby' => 'name', 'selected' => get_option('default_category'), 'hierarchical' => true));
@@ -80,7 +80,7 @@ $post_formats = get_post_format_strings();
 unset( $post_formats['standard'] );
 ?>
 <tr>
-<th scope="row"><label for="default_post_format"><?php _e('Default Post Format') ?></label></th>
+<th scope="row"><label for="default_post_format"><?php _e('Default Posts Format') ?></label></th>
 <td>
 	<select name="default_post_format" id="default_post_format">
 		<option value="0"><?php echo get_post_format_string( 'standard' ); ?></option>
@@ -113,7 +113,7 @@ do_settings_fields('writing', 'remote_publishing'); // A deprecated section.
 /** This filter is documented in wp-admin/options.php */
 if ( apply_filters( 'enable_post_by_email_configuration', true ) ) {
 ?>
-<h2 class="title"><?php _e( 'Post via email' ) ?></h2>
+<h2 class="title"><?php _e( 'Posts via email' ) ?></h2>
 <p><?php
 printf(
 	/* translators: 1, 2, 3: examples of random email addresses */

@@ -56,7 +56,7 @@ msgid "When the two column layout is assigned, the page title is in one column a
 msgstr "Cuando se elige el diseño de dos columnas, el título de la página está en una columna y el contenido está en la otra."
 
 #: single.php:32
-msgid "Next Post"
+msgid "Next Posts"
 msgstr "Siguiente entrada"
 
 #: index.php:27
@@ -178,7 +178,7 @@ msgid "Nothing Found"
 msgstr "Nada encontrado"
 
 #: single.php:31
-msgid "Previous Post"
+msgid "Previous Posts"
 msgstr "Entrada anterior:"
 
 #: comments.php:66 single.php:31

@@ -168,7 +168,7 @@ final class WP_Customize_Nav_Menus {
 					'id'         => $object . '-archive',
 					'title'      => $post_type->labels->archives,
 					'type'       => 'post_type_archive',
-					'type_label' => __( 'Post Type Archive' ),
+					'type_label' => __( 'Posts Type Archive' ),
 					'object'     => $object,
 					'url'        => get_post_type_archive_link( $object ),
 				);
@@ -777,12 +777,12 @@ final class WP_Customize_Nav_Menus {
 	 * @since 4.7.0
 	 *
 	 * @param array $postarr {
-	 *     Post array. Note that post_status is overridden to be `auto-draft`.
+	 *     Posts array. Note that post_status is overridden to be `auto-draft`.
 	 *
-	 *     @var string $post_title   Post title. Required.
-	 *     @var string $post_type    Post type. Required.
-	 *     @var string $post_name    Post name.
-	 *     @var string $post_content Post content.
+	 *     @var string $post_title   Posts title. Required.
+	 *     @var string $post_type    Posts type. Required.
+	 *     @var string $post_name    Posts name.
+	 *     @var string $post_content Posts content.
 	 * }
 	 * @return WP_Post|WP_Error Inserted auto-draft post object or error.
 	 */
@@ -876,7 +876,7 @@ final class WP_Customize_Nav_Menus {
 			if ( ! empty( $post_type_object->labels->singular_name ) ) {
 				$singular_name = $post_type_object->labels->singular_name;
 			} else {
-				$singular_name = __( 'Post' );
+				$singular_name = __( 'Posts' );
 			}
 
 			$data = array(
@@ -1154,8 +1154,8 @@ final class WP_Customize_Nav_Menus {
 	 * @since 4.7.0
 	 * @access public
 	 *
-	 * @param array $value Post IDs.
-	 * @returns array Post IDs.
+	 * @param array $value Posts IDs.
+	 * @returns array Posts IDs.
 	 */
 	public function sanitize_nav_menus_created_posts( $value ) {
 		$post_ids = array();

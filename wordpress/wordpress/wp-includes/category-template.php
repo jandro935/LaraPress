@@ -126,7 +126,7 @@ function get_the_category_by_ID( $cat_ID ) {
  *
  * @param string $separator Optional, default is empty string. Separator for between the categories.
  * @param string $parents Optional. How to display the parents.
- * @param int $post_id Optional. Post ID to retrieve categories.
+ * @param int $post_id Optional. Posts ID to retrieve categories.
  * @return string
  */
 function get_the_category_list( $separator = '', $parents='', $post_id = false ) {
@@ -230,7 +230,7 @@ function get_the_category_list( $separator = '', $parents='', $post_id = false )
  * @since 1.2.0
  *
  * @param int|string|array $category Category ID, name or slug, or array of said.
- * @param int|object $post Optional. Post to check instead of the current post. (since 2.7.0)
+ * @param int|object $post Optional. Posts to check instead of the current post. (since 2.7.0)
  * @return bool True if the current post is in any of the given categories.
  */
 function in_category( $category, $post = null ) {
@@ -247,7 +247,7 @@ function in_category( $category, $post = null ) {
  *
  * @param string $separator Optional, default is empty string. Separator for between the categories.
  * @param string $parents Optional. How to display the parents.
- * @param int $post_id Optional. Post ID to retrieve categories.
+ * @param int $post_id Optional. Posts ID to retrieve categories.
  */
 function the_category( $separator = '', $parents='', $post_id = false ) {
 	echo get_the_category_list( $separator, $parents, $post_id );
@@ -1049,7 +1049,7 @@ function get_tag_link( $tag ) {
  *
  * @since 2.3.0
  *
- * @param int $id Post ID.
+ * @param int $id Posts ID.
  * @return array|false|WP_Error Array of tag objects on success, false on failure.
  */
 function get_the_tags( $id = 0 ) {
@@ -1074,7 +1074,7 @@ function get_the_tags( $id = 0 ) {
  * @param string $before Optional. Before tags.
  * @param string $sep Optional. Between tags.
  * @param string $after Optional. After tags.
- * @param int $id Optional. Post ID. Defaults to the current post.
+ * @param int $id Optional. Posts ID. Defaults to the current post.
  * @return string|false|WP_Error A list of tags on success, false if there are no terms, WP_Error on failure.
  */
 function get_the_tag_list( $before = '', $sep = '', $after = '', $id = 0 ) {
@@ -1088,7 +1088,7 @@ function get_the_tag_list( $before = '', $sep = '', $after = '', $id = 0 ) {
 	 * @param string $before   String to use before tags.
 	 * @param string $sep      String to use between the tags.
 	 * @param string $after    String to use after tags.
-	 * @param int    $id       Post ID.
+	 * @param int    $id       Posts ID.
 	 */
 	return apply_filters( 'the_tags', get_the_term_list( $id, 'post_tag', $before, $sep, $after ), $before, $sep, $after, $id );
 }
@@ -1151,7 +1151,7 @@ function term_description( $term = 0, $taxonomy = 'post_tag' ) {
  *
  * @since 2.5.0
  *
- * @param int|object $post Post ID or object.
+ * @param int|object $post Posts ID or object.
  * @param string $taxonomy Taxonomy name.
  * @return array|false|WP_Error Array of WP_Term objects on success, false if there are no terms
  *                              or the post does not exist, WP_Error on failure.
@@ -1175,7 +1175,7 @@ function get_the_terms( $post, $taxonomy ) {
 	 * @since 3.1.0
 	 *
 	 * @param array|WP_Error $terms    List of attached terms, or WP_Error on failure.
-	 * @param int            $post_id  Post ID.
+	 * @param int            $post_id  Posts ID.
 	 * @param string         $taxonomy Name of the taxonomy.
 	 */
 	$terms = apply_filters( 'get_the_terms', $terms, $post->ID, $taxonomy );
@@ -1191,7 +1191,7 @@ function get_the_terms( $post, $taxonomy ) {
  *
  * @since 2.5.0
  *
- * @param int $id Post ID.
+ * @param int $id Posts ID.
  * @param string $taxonomy Taxonomy name.
  * @param string $before Optional. Before list.
  * @param string $sep Optional. Separate items using this.
@@ -1237,7 +1237,7 @@ function get_the_term_list( $id, $taxonomy, $before = '', $sep = '', $after = ''
  *
  * @since 2.5.0
  *
- * @param int $id Post ID.
+ * @param int $id Posts ID.
  * @param string $taxonomy Taxonomy name.
  * @param string $before Optional. Before list.
  * @param string $sep Optional. Separate items using this.
@@ -1270,7 +1270,7 @@ function the_terms( $id, $taxonomy, $before = '', $sep = ', ', $after = '' ) {
  * @since 3.1.0
  *
  * @param string|int|array $category Optional. The category name/term_id/slug or array of them to check for.
- * @param int|object $post Optional. Post to check instead of the current post.
+ * @param int|object $post Optional. Posts to check instead of the current post.
  * @return bool True if the current post has any of the given categories (or any category, if no category specified).
  */
 function has_category( $category = '', $post = null ) {
@@ -1291,7 +1291,7 @@ function has_category( $category = '', $post = null ) {
  * @since 2.6.0
  *
  * @param string|int|array $tag Optional. The tag name/term_id/slug or array of them to check for.
- * @param int|object $post Optional. Post to check instead of the current post. (since 2.7.0)
+ * @param int|object $post Optional. Posts to check instead of the current post. (since 2.7.0)
  * @return bool True if the current post has any of the given tags (or any tag, if no tag specified).
  */
 function has_tag( $tag = '', $post = null ) {
@@ -1309,7 +1309,7 @@ function has_tag( $tag = '', $post = null ) {
  *
  * @param string|int|array $term Optional. The term name/term_id/slug or array of them to check for.
  * @param string $taxonomy Taxonomy name
- * @param int|object $post Optional. Post to check instead of the current post.
+ * @param int|object $post Optional. Posts to check instead of the current post.
  * @return bool True if the current post has any of the given tags (or any tag, if no tag specified).
  */
 function has_term( $term = '', $taxonomy = '', $post = null ) {

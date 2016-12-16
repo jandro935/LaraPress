@@ -96,7 +96,7 @@ if ( !empty($tb_url) && !empty($title) ) {
 	*
 	* @since 4.7.0
 	*
-	* @param int    $tb_id     Post ID related to the trackback.
+	* @param int    $tb_id     Posts ID related to the trackback.
 	* @param string $tb_url    Trackback URL.
 	* @param string $charset   Character Set.
 	* @param string $title     Trackback Title.

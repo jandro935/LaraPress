@@ -322,7 +322,7 @@ add_action( 'delete_post',                '_wp_delete_post_menu_item'         );
 add_action( 'delete_term',                '_wp_delete_tax_menu_item',   10, 3 );
 add_action( 'transition_post_status',     '_wp_auto_add_pages_to_menu', 10, 3 );
 
-// Post Thumbnail CSS class filtering
+// Posts Thumbnail CSS class filtering
 add_action( 'begin_fetch_post_thumbnail_html', '_wp_post_thumbnail_class_filter_add'    );
 add_action( 'end_fetch_post_thumbnail_html',   '_wp_post_thumbnail_class_filter_remove' );
 
@@ -331,7 +331,7 @@ add_action( 'template_redirect',  'wp_old_slug_redirect'              );
 add_action( 'post_updated',       'wp_check_for_changed_slugs', 12, 3 );
 add_action( 'attachment_updated', 'wp_check_for_changed_slugs', 12, 3 );
 
-// Nonce check for Post Previews
+// Nonce check for Posts Previews
 add_action( 'init', '_show_post_preview' );
 
 // Output JS to reset window.name for previews
@@ -406,14 +406,14 @@ add_action( 'update_option_gmt_offset', 'delete_get_calendar_cache' );
 // Author
 add_action( 'transition_post_status', '__clear_multi_author_cache' );
 
-// Post
+// Posts
 add_action( 'init', 'create_initial_post_types', 0 ); // highest priority
 add_action( 'admin_menu', '_add_post_type_submenus' );
 add_action( 'before_delete_post', '_reset_front_page_settings_for_post' );
 add_action( 'wp_trash_post',      '_reset_front_page_settings_for_post' );
 add_action( 'change_locale', 'create_initial_post_types' );
 
-// Post Formats
+// Posts Formats
 add_filter( 'request', '_post_format_request' );
 add_filter( 'term_link', '_post_format_link', 10, 3 );
 add_filter( 'get_post_format', '_post_format_get_term' );

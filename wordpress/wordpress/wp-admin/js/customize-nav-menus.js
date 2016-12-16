@@ -87,8 +87,8 @@
 	 * @access public
 	 *
 	 * @param {object} params - Parameters for the draft post to create.
-	 * @param {string} params.post_type - Post type to add.
-	 * @param {string} params.post_title - Post title to use.
+	 * @param {string} params.post_type - Posts type to add.
+	 * @param {string} params.post_title - Posts title to use.
 	 * @return {jQuery.promise} Promise resolved with the added post.
 	 */
 	api.Menus.insertAutoDraftPost = function insertAutoDraftPost( params ) {

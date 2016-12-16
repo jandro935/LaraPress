@@ -1413,9 +1413,9 @@ final class _WP_Editors {
 		 *     An associative array of query results.
 		 *
 		 *     @type array {
-		 *         @type int    $ID        Post ID.
+		 *         @type int    $ID        Posts ID.
 		 *         @type string $title     The trimmed, escaped post title.
-		 *         @type string $permalink Post permalink.
+		 *         @type string $permalink Posts permalink.
 		 *         @type string $info      A 'Y/m/d'-formatted date for 'post' post type,
 		 *                                 the 'singular_name' post type label otherwise.
 		 *     }

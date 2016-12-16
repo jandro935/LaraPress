@@ -1056,9 +1056,9 @@ class WP_REST_Posts_Controller extends WP_REST_Controller {
 	 * @since 4.7.0
 	 * @access protected
 	 *
-	 * @param string $post_status Post status.
-	 * @param object $post_type   Post type.
-	 * @return string|WP_Error Post status or WP_Error if lacking the proper permission.
+	 * @param string $post_status Posts status.
+	 * @param object $post_type   Posts type.
+	 * @return string|WP_Error Posts status or WP_Error if lacking the proper permission.
 	 */
 	protected function handle_status_param( $post_status, $post_type ) {
 

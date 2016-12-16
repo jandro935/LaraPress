@@ -29,7 +29,7 @@ do_action( 'rss_tag_pre', 'atom-comments' );
 >
 	<title type="text"><?php
 		if ( is_singular() ) {
-			/* translators: Comments feed title. 1: Post title */
+			/* translators: Comments feed title. 1: Posts title */
 			printf( ent2ncr( __( 'Comments on %s' ) ), get_the_title_rss() );
 		} elseif ( is_search() ) {
 			/* translators: Comments feed title. 1: Site name, 2: Search query */
@@ -77,7 +77,7 @@ if ( have_comments() ) : while ( have_comments() ) : the_comment();
 				$title = get_the_title($comment_post->ID);
 				/** This filter is documented in wp-includes/feed.php */
 				$title = apply_filters( 'the_title_rss', $title );
-				/* translators: Individual comment title. 1: Post title, 2: Comment author name */
+				/* translators: Individual comment title. 1: Posts title, 2: Comment author name */
 				printf(ent2ncr(__('Comment on %1$s by %2$s')), $title, get_comment_author_rss());
 			} else {
 				/* translators: Comment author title. 1: Comment author name */

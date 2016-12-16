@@ -548,8 +548,8 @@ function wp_extract_urls( $content ) {
  *
  * @global wpdb $wpdb WordPress database abstraction object.
  *
- * @param string $content Post Content.
- * @param int    $post_ID Post ID.
+ * @param string $content Posts Content.
+ * @param int    $post_ID Posts ID.
  */
 function do_enclose( $content, $post_ID ) {
 	global $wpdb;

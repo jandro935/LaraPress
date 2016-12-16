@@ -1,9 +1,9 @@
 <?php
 /**
- * Post API: WP_Post class
+ * Posts API: WP_Post class
  *
  * @package WordPress
- * @subpackage Post
+ * @subpackage Posts
  * @since 4.4.0
  */
 
@@ -204,8 +204,8 @@ final class WP_Post {
 	 *
 	 * @global wpdb $wpdb WordPress database abstraction object.
 	 *
-	 * @param int $post_id Post ID.
-	 * @return WP_Post|false Post object, false otherwise.
+	 * @param int $post_id Posts ID.
+	 * @return WP_Post|false Posts object, false otherwise.
 	 */
 	public static function get_instance( $post_id ) {
 		global $wpdb;

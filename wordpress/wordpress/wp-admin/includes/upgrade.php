@@ -324,7 +324,7 @@ function wp_install_maybe_enable_pretty_permalinks() {
 
 		$test_url = '';
 
-		// Test against a real WordPress Post
+		// Test against a real WordPress Posts
 		$first_post = get_page_by_path( sanitize_title( _x( 'hello-world', 'Default post slug' ) ), OBJECT, 'post' );
 		if ( $first_post ) {
 			$test_url = get_permalink( $first_post->ID );

@@ -395,7 +395,7 @@ function media_handle_upload($file_id, $post_id, $post_data = array(), $override
  * @param array  $file_array Array similar to a `$_FILES` upload array.
  * @param int    $post_id    The post ID the media is associated with.
  * @param string $desc       Optional. Description of the side-loaded file. Default null.
- * @param array  $post_data  Optional. Post data to override. Default empty array.
+ * @param array  $post_data  Optional. Posts data to override. Default empty array.
  * @return int|object The ID of the attachment or a WP_Error on failure.
  */
 function media_handle_sideload( $file_array, $post_id, $desc = null, $post_data = array() ) {
@@ -1078,7 +1078,7 @@ function image_link_input_fields($post, $url_type = '') {
 	<input type='text' class='text urlfield' name='attachments[$post->ID][url]' value='" . esc_attr($url) . "' /><br />
 	<button type='button' class='button urlnone' data-link-url=''>" . __('None') . "</button>
 	<button type='button' class='button urlfile' data-link-url='" . esc_attr($file) . "'>" . __('File URL') . "</button>
-	<button type='button' class='button urlpost' data-link-url='" . esc_attr($link) . "'>" . __('Attachment Post URL') . "</button>
+	<button type='button' class='button urlpost' data-link-url='" . esc_attr($link) . "'>" . __('Attachment Posts URL') . "</button>
 ";
 }
 
@@ -1091,7 +1091,7 @@ function image_link_input_fields($post, $url_type = '') {
  * @return string HTML markup for the textarea element.
  */
 function wp_caption_input_textarea($edit_post) {
-	// Post data is already escaped.
+	// Posts data is already escaped.
 	$name = "attachments[{$edit_post->ID}][post_excerpt]";
 
 	return '<textarea name="' . $name . '" id="' . $name . '">' . $edit_post->post_excerpt . '</textarea>';
@@ -1318,7 +1318,7 @@ function get_attachment_fields_to_edit($post, $errors = null) {
  *
  * @global WP_Query $wp_the_query
  *
- * @param int $post_id Optional. Post ID.
+ * @param int $post_id Optional. Posts ID.
  * @param array $errors Errors for attachment, if any.
  * @return string
  */
@@ -1490,7 +1490,7 @@ function get_media_item( $attachment_id, $args = null ) {
 	);
 
 	if ( $r['send'] ) {
-		$r['send'] = get_submit_button( __( 'Insert into Post' ), '', "send[$attachment_id]", false );
+		$r['send'] = get_submit_button( __( 'Insert into Posts' ), '', "send[$attachment_id]", false );
 	}
 
 	$delete = empty( $r['delete'] ) ? '' : $r['delete'];
@@ -2616,13 +2616,13 @@ function wp_media_insert_url_form( $default_view = 'image' ) {
 		<tr class="image-only">
 			<td></td>
 			<td>
-				<input type="button" class="button" id="go_button" style="color:#bbb;" onclick="addExtImage.insert()" value="' . esc_attr__('Insert into Post') . '" />
+				<input type="button" class="button" id="go_button" style="color:#bbb;" onclick="addExtImage.insert()" value="' . esc_attr__('Insert into Posts') . '" />
 			</td>
 		</tr>
 		<tr class="not-image">
 			<td></td>
 			<td>
-				' . get_submit_button( __( 'Insert into Post' ), '', 'insertonlybutton', false ) . '
+				' . get_submit_button( __( 'Insert into Posts' ), '', 'insertonlybutton', false ) . '
 			</td>
 		</tr>
 	</tbody></table>

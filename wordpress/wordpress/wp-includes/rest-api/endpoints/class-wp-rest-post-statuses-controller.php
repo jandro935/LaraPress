@@ -143,7 +143,7 @@ class WP_REST_Post_Statuses_Controller extends WP_REST_Controller {
 	 * @since 4.7.0
 	 * @access protected
 	 *
-	 * @param object $status Post status.
+	 * @param object $status Posts status.
 	 * @return bool True if the post status is visible, otherwise false.
 	 */
 	protected function check_read_permission( $status ) {
@@ -191,9 +191,9 @@ class WP_REST_Post_Statuses_Controller extends WP_REST_Controller {
 	 * @since 4.7.0
 	 * @access public
 	 *
-	 * @param stdClass        $status  Post status data.
+	 * @param stdClass        $status  Posts status data.
 	 * @param WP_REST_Request $request Full details about the request.
-	 * @return WP_REST_Response Post status data.
+	 * @return WP_REST_Response Posts status data.
 	 */
 	public function prepare_item_for_response( $status, $request ) {
 

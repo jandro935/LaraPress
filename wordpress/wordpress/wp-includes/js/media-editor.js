@@ -44,7 +44,7 @@
 		 * @global getUserSetting()
 		 *
 		 * @param {Object} [props={}] Attachment details (align, link, size, etc).
-		 * @param {Object} attachment The attachment object, media version of Post.
+		 * @param {Object} attachment The attachment object, media version of Posts.
 		 * @returns {Object} Joined props
 		 */
 		props: function( props, attachment ) {
@@ -112,7 +112,7 @@
 		 * @global wp.html.string
 		 *
 		 * @param {Object} props Attachment details (align, link, size, etc).
-		 * @param {Object} attachment The attachment object, media version of Post.
+		 * @param {Object} attachment The attachment object, media version of Posts.
 		 * @returns {string} The link markup
 		 */
 		link: function( props, attachment ) {
@@ -138,7 +138,7 @@
 		 * Create an Audio shortcode string that is suitable for passing to the editor
 		 *
 		 * @param {Object} props Attachment details (align, link, size, etc).
-		 * @param {Object} attachment The attachment object, media version of Post.
+		 * @param {Object} attachment The attachment object, media version of Posts.
 		 * @returns {string} The audio shortcode
 		 */
 		audio: function( props, attachment ) {
@@ -148,7 +148,7 @@
 		 * Create a Video shortcode string that is suitable for passing to the editor
 		 *
 		 * @param {Object} props Attachment details (align, link, size, etc).
-		 * @param {Object} attachment The attachment object, media version of Post.
+		 * @param {Object} attachment The attachment object, media version of Posts.
 		 * @returns {string} The video shortcode
 		 */
 		video: function( props, attachment ) {
@@ -164,7 +164,7 @@
 		 *
 		 * @param {string} type The shortcode tag name: 'audio' or 'video'.
 		 * @param {Object} props Attachment details (align, link, size, etc).
-		 * @param {Object} attachment The attachment object, media version of Post.
+		 * @param {Object} attachment The attachment object, media version of Posts.
 		 * @returns {string} The media shortcode
 		 */
 		_audioVideo: function( type, props, attachment ) {
@@ -214,7 +214,7 @@
 		 * @global wp.shortcode
 		 *
 		 * @param {Object} props Attachment details (align, link, size, etc).
-		 * @param {Object} attachment The attachment object, media version of Post.
+		 * @param {Object} attachment The attachment object, media version of Posts.
 		 * @returns {string}
 		 */
 		image: function( props, attachment ) {
@@ -974,7 +974,7 @@
 			 * @global wp.media.post
 			 *
 			 * @param {Object} props Attachment details (align, link, size, etc).
-			 * @param {Object} attachment The attachment object, media version of Post.
+			 * @param {Object} attachment The attachment object, media version of Posts.
 			 * @returns {Promise}
 			 */
 			attachment: function( props, attachment ) {

@@ -46,7 +46,7 @@ require_once(ABSPATH . 'wp-admin/includes/options.php');
 /** WordPress Plugin Administration API */
 require_once(ABSPATH . 'wp-admin/includes/plugin.php');
 
-/** WordPress Post Administration API */
+/** WordPress Posts Administration API */
 require_once(ABSPATH . 'wp-admin/includes/post.php');
 
 /** WordPress Administration Screen API */

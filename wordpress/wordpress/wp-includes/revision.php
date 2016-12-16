@@ -387,8 +387,8 @@ function wp_restore_post_revision( $revision_id, $fields = null ) {
 	 *
 	 * @since 2.6.0
 	 *
-	 * @param int $post_id     Post ID.
-	 * @param int $revision_id Post revision ID.
+	 * @param int $post_id     Posts ID.
+	 * @param int $revision_id Posts revision ID.
 	 */
 	do_action( 'wp_restore_post_revision', $post_id, $revision['ID'] );
 
@@ -417,8 +417,8 @@ function wp_delete_post_revision( $revision_id ) {
 		 *
 		 * @since 2.6.0
 		 *
-		 * @param int          $revision_id Post revision ID.
-		 * @param object|array $revision    Post revision object or array.
+		 * @param int          $revision_id Posts revision ID.
+		 * @param object|array $revision    Posts revision object or array.
 		 */
 		do_action( 'wp_delete_post_revision', $revision->ID, $revision );
 	}

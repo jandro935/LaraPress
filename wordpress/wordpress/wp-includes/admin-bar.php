@@ -521,7 +521,7 @@ function wp_admin_bar_my_sites_menu( $wp_admin_bar ) {
 			$wp_admin_bar->add_menu( array(
 				'parent' => $menu_id,
 				'id'     => $menu_id . '-n',
-				'title'  => __( 'New Post' ),
+				'title'  => __( 'New Posts' ),
 				'href'   => admin_url( 'post-new.php' ),
 			) );
 		}

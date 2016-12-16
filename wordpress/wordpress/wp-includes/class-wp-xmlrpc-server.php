@@ -1167,17 +1167,17 @@ class wp_xmlrpc_server extends IXR_Server {
 	 *         Content struct for adding a new post. See wp_insert_post() for information on
 	 *         additional post fields
 	 *
-	 *         @type string $post_type      Post type. Default 'post'.
-	 *         @type string $post_status    Post status. Default 'draft'
-	 *         @type string $post_title     Post title.
-	 *         @type int    $post_author    Post author ID.
-	 *         @type string $post_excerpt   Post excerpt.
-	 *         @type string $post_content   Post content.
-	 *         @type string $post_date_gmt  Post date in GMT.
-	 *         @type string $post_date      Post date.
-	 *         @type string $post_password  Post password (20-character limit).
-	 *         @type string $comment_status Post comment enabled status. Accepts 'open' or 'closed'.
-	 *         @type string $ping_status    Post ping status. Accepts 'open' or 'closed'.
+	 *         @type string $post_type      Posts type. Default 'post'.
+	 *         @type string $post_status    Posts status. Default 'draft'
+	 *         @type string $post_title     Posts title.
+	 *         @type int    $post_author    Posts author ID.
+	 *         @type string $post_excerpt   Posts excerpt.
+	 *         @type string $post_content   Posts content.
+	 *         @type string $post_date_gmt  Posts date in GMT.
+	 *         @type string $post_date      Posts date.
+	 *         @type string $post_password  Posts password (20-character limit).
+	 *         @type string $comment_status Posts comment enabled status. Accepts 'open' or 'closed'.
+	 *         @type string $ping_status    Posts ping status. Accepts 'open' or 'closed'.
 	 *         @type bool   $sticky         Whether the post should be sticky. Automatically false if
 	 *                                      `$post_status` is 'private'.
 	 *         @type int    $post_thumbnail ID of an image to use as the post thumbnail/featured image.
@@ -1195,7 +1195,7 @@ class wp_xmlrpc_server extends IXR_Server {
 	 *         }
 	 *     }
 	 * }
-	 * @return int|IXR_Error Post ID on success, IXR_Error instance otherwise.
+	 * @return int|IXR_Error Posts ID on success, IXR_Error instance otherwise.
 	 */
 	public function wp_newPost( $args ) {
 		if ( ! $this->minimum_args( $args, 4 ) )
@@ -5151,8 +5151,8 @@ class wp_xmlrpc_server extends IXR_Server {
 	 *
 	 * @global wpdb $wpdb WordPress database abstraction object.
 	 *
-	 * @param int $post_ID Post ID.
-	 * @param string $post_content Post Content for attachment.
+	 * @param int $post_ID Posts ID.
+	 * @param string $post_content Posts Content for attachment.
 	 */
 	public function attach_uploads( $post_ID, $post_content ) {
 		global $wpdb;

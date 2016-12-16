@@ -1033,7 +1033,7 @@ final class WP_Theme implements ArrayAccess {
 				}
 
 				$types = array( 'page' );
-				if ( preg_match( '|Template Post Type:(.*)$|mi', file_get_contents( $full_path ), $type ) ) {
+				if ( preg_match( '|Template Posts Type:(.*)$|mi', file_get_contents( $full_path ), $type ) ) {
 					$types = explode( ',', _cleanup_header_comment( $type[1] ) );
 				}
 
@@ -1069,7 +1069,7 @@ final class WP_Theme implements ArrayAccess {
 	 * @access public
 	 *
 	 * @param WP_Post|null $post      Optional. The post being edited, provided for context.
-	 * @param string       $post_type Optional. Post type to get the templates for. Default 'page'.
+	 * @param string       $post_type Optional. Posts type to get the templates for. Default 'page'.
 	 *                                If a post is provided, its post type is used.
 	 * @return array Array of page templates, keyed by filename, with the value of the translated header name.
 	 */
@@ -1098,7 +1098,7 @@ final class WP_Theme implements ArrayAccess {
 		 *                                     values are translated names.
 		 * @param WP_Theme     $this           The theme object.
 		 * @param WP_Post|null $post           The post being edited, provided for context, or null.
-		 * @param string       $post_type      Post type to get the templates for.
+		 * @param string       $post_type      Posts type to get the templates for.
 		 */
 		return (array) apply_filters( "theme_{$post_type}_templates", $post_templates, $this, $post, $post_type );
 	}

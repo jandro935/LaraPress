@@ -1,6 +1,6 @@
 <?php
 /**
- * WordPress Post Administration API.
+ * WordPress Posts Administration API.
  *
  * @package WordPress
  * @subpackage Administration
@@ -183,7 +183,7 @@ function _wp_translate_postdata( $update = false, $post_data = null ) {
  * @global wpdb $wpdb WordPress database abstraction object.
  *
  * @param array $post_data Optional.
- * @return int Post ID.
+ * @return int Posts ID.
  */
 function edit_post( $post_data = null ) {
 	global $wpdb;
@@ -244,7 +244,7 @@ function edit_post( $post_data = null ) {
 	if ( is_wp_error($post_data) )
 		wp_die( $post_data->get_error_message() );
 
-	// Post Formats
+	// Posts Formats
 	if ( isset( $post_data['post_format'] ) )
 		set_post_format( $post_ID, $post_data['post_format'] );
 
@@ -582,13 +582,13 @@ function bulk_edit_posts( $post_data = null ) {
 }
 
 /**
- * Default post information to use when populating the "Write Post" form.
+ * Default post information to use when populating the "Write Posts" form.
  *
  * @since 2.0.0
  *
  * @param string $post_type    Optional. A post type string. Default 'post'.
  * @param bool   $create_in_db Optional. Whether to insert the post into database. Default false.
- * @return WP_Post Post object containing all the default post data as attributes
+ * @return WP_Post Posts object containing all the default post data as attributes
  */
 function get_default_post_to_edit( $post_type = 'post', $create_in_db = false ) {
 	$post_title = '';
@@ -631,32 +631,32 @@ function get_default_post_to_edit( $post_type = 'post', $create_in_db = false ) 
 	}
 
 	/**
-	 * Filters the default post content initially used in the "Write Post" form.
+	 * Filters the default post content initially used in the "Write Posts" form.
 	 *
 	 * @since 1.5.0
 	 *
 	 * @param string  $post_content Default post content.
-	 * @param WP_Post $post         Post object.
+	 * @param WP_Post $post         Posts object.
 	 */
 	$post->post_content = apply_filters( 'default_content', $post_content, $post );
 
 	/**
-	 * Filters the default post title initially used in the "Write Post" form.
+	 * Filters the default post title initially used in the "Write Posts" form.
 	 *
 	 * @since 1.5.0
 	 *
 	 * @param string  $post_title Default post title.
-	 * @param WP_Post $post       Post object.
+	 * @param WP_Post $post       Posts object.
 	 */
 	$post->post_title = apply_filters( 'default_title', $post_title, $post );
 
 	/**
-	 * Filters the default post excerpt initially used in the "Write Post" form.
+	 * Filters the default post excerpt initially used in the "Write Posts" form.
 	 *
 	 * @since 1.5.0
 	 *
 	 * @param string  $post_excerpt Default post excerpt.
-	 * @param WP_Post $post         Post object.
+	 * @param WP_Post $post         Posts object.
 	 */
 	$post->post_excerpt = apply_filters( 'default_excerpt', $post_excerpt, $post );
 
@@ -670,10 +670,10 @@ function get_default_post_to_edit( $post_type = 'post', $create_in_db = false ) 
  *
  * @global wpdb $wpdb WordPress database abstraction object.
  *
- * @param string $title Post title
+ * @param string $title Posts title
  * @param string $content Optional post content
  * @param string $date Optional post date
- * @return int Post ID if post exists, 0 otherwise.
+ * @return int Posts ID if post exists, 0 otherwise.
  */
 function post_exists($title, $content = '', $date = '') {
 	global $wpdb;
@@ -707,7 +707,7 @@ function post_exists($title, $content = '', $date = '') {
 }
 
 /**
- * Creates a new post from the "Write Post" form using $_POST information.
+ * Creates a new post from the "Write Posts" form using $_POST information.
  *
  * @since 2.1.0
  *
@@ -793,7 +793,7 @@ function write_post() {
 }
 
 //
-// Post Meta
+// Posts Meta
 //
 
 /**
@@ -925,7 +925,7 @@ function update_meta( $meta_id, $meta_key, $meta_value ) {
  * @since 2.3.0
  * @access private
  *
- * @param int|object $post Post ID or post object.
+ * @param int|object $post Posts ID or post object.
  * @return void|int|WP_Error Void if nothing fixed. 0 or WP_Error on update failure. The post ID on update success.
  */
 function _fix_attachment_links( $post ) {
@@ -1242,7 +1242,7 @@ function postbox_classes( $id, $page ) {
  *
  * @since 2.5.0
  *
- * @param int    $id    Post ID or post object.
+ * @param int    $id    Posts ID or post object.
  * @param string $title Optional. Title to override the post's current title when generating the post name. Default null.
  * @param string $name  Optional. Name to override the post name. Default null.
  * @return array Array containing the sample permalink with placeholder for the post name, and the post name.
@@ -1307,10 +1307,10 @@ function get_sample_permalink($id, $title = null, $name = null) {
 	 * @since 4.4.0
 	 *
 	 * @param array   $permalink Array containing the sample permalink with placeholder for the post name, and the post name.
-	 * @param int     $post_id   Post ID.
-	 * @param string  $title     Post title.
-	 * @param string  $name      Post name (slug).
-	 * @param WP_Post $post      Post object.
+	 * @param int     $post_id   Posts ID.
+	 * @param string  $title     Posts title.
+	 * @param string  $name      Posts name (slug).
+	 * @param WP_Post $post      Posts object.
 	 */
 	return apply_filters( 'get_sample_permalink', $permalink, $post->ID, $title, $name, $post );
 }
@@ -1320,7 +1320,7 @@ function get_sample_permalink($id, $title = null, $name = null) {
  *
  * @since 2.5.0
  *
- * @param int    $id        Post ID or post object.
+ * @param int    $id        Posts ID or post object.
  * @param string $new_title Optional. New title. Default null.
  * @param string $new_slug  Optional. New slug. Default null.
  * @return string The HTML of the sample permalink slug editor.
@@ -1388,10 +1388,10 @@ function get_sample_permalink_html( $id, $new_title = null, $new_slug = null ) {
 	 * @since 4.4.0 Added `$post` parameter.
 	 *
 	 * @param string  $return    Sample permalink HTML markup.
-	 * @param int     $post_id   Post ID.
+	 * @param int     $post_id   Posts ID.
 	 * @param string  $new_title New sample permalink title.
 	 * @param string  $new_slug  New sample permalink slug.
-	 * @param WP_Post $post      Post object.
+	 * @param WP_Post $post      Posts object.
 	 */
 	$return = apply_filters( 'get_sample_permalink_html', $return, $post->ID, $new_title, $new_slug, $post );
 
@@ -1434,11 +1434,11 @@ function _wp_post_thumbnail_html( $thumbnail_id = null, $post = null ) {
 		 *
 		 * @since 4.4.0
 		 *
-		 * @param string|array $size         Post thumbnail image size to display in the meta box. Accepts any valid
+		 * @param string|array $size         Posts thumbnail image size to display in the meta box. Accepts any valid
 		 *                                   image size, or an array of width and height values in pixels (in that order).
 		 *                                   If the 'post-thumbnail' size is set, default is 'post-thumbnail'. Otherwise,
 		 *                                   default is an array with 266 as both the height and width values.
-		 * @param int          $thumbnail_id Post thumbnail attachment ID.
+		 * @param int          $thumbnail_id Posts thumbnail attachment ID.
 		 * @param WP_Post      $post         The post object associated with the thumbnail.
 		 */
 		$size = apply_filters( 'admin_post_thumbnail_size', $size, $thumbnail_id, $post );
@@ -1466,7 +1466,7 @@ function _wp_post_thumbnail_html( $thumbnail_id = null, $post = null ) {
 	 * @since 4.6.0 Added the `$thumbnail_id` parameter.
 	 *
 	 * @param string $content      Admin post thumbnail HTML markup.
-	 * @param int    $post_id      Post ID.
+	 * @param int    $post_id      Posts ID.
 	 * @param int    $thumbnail_id Thumbnail ID.
 	 */
 	return apply_filters( 'admin_post_thumbnail_html', $content, $post->ID, $thumbnail_id );
@@ -1598,7 +1598,7 @@ function _admin_notice_post_locked() {
 		 * @since 3.6.0
 		 *
 		 * @param bool    $override Whether to allow overriding post locks. Default true.
-		 * @param WP_Post $post     Post object.
+		 * @param WP_Post $post     Posts object.
 		 * @param WP_User $user     User object.
 		 */
 		$override = apply_filters( 'override_post_lock', true, $post, $user );
@@ -1620,7 +1620,7 @@ function _admin_notice_post_locked() {
 		 *
 		 * @since 3.6.0
 		 *
-		 * @param WP_Post $post Post object.
+		 * @param WP_Post $post Posts object.
 		 */
 		do_action( 'post_locked_dialog', $post );
 		?>
@@ -1657,7 +1657,7 @@ function _admin_notice_post_locked() {
 			 *
 			 * @since 3.6.0
 			 *
-			 * @param WP_Post $post Post object.
+			 * @param WP_Post $post Posts object.
 			 */
 			do_action( 'post_lock_lost_dialog', $post );
 			?>
@@ -1722,7 +1722,7 @@ function wp_create_post_autosave( $post_data ) {
 		 *
 		 * @since 4.1.0
 		 *
-		 * @param array $new_autosave Post array - the autosave that is about to be saved.
+		 * @param array $new_autosave Posts array - the autosave that is about to be saved.
 		 */
 		do_action( 'wp_creating_autosave', $new_autosave );
 
@@ -1838,7 +1838,7 @@ function wp_autosave( $post_data ) {
 /**
  * Redirect to previous page.
  *
- * @param int $post_id Optional. Post ID.
+ * @param int $post_id Optional. Posts ID.
  */
 function redirect_post($post_id = '') {
 	if ( isset($_POST['save']) || isset($_POST['publish']) ) {

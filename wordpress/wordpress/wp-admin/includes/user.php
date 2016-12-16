@@ -347,7 +347,7 @@ function wp_delete_user( $id, $reassign = null ) {
 		 *
 		 * @since 3.4.0
 		 *
-		 * @param array $post_types_to_delete Post types to delete.
+		 * @param array $post_types_to_delete Posts types to delete.
 		 * @param int   $id                   User ID.
 		 */
 		$post_types_to_delete = apply_filters( 'post_types_to_delete_with_user', $post_types_to_delete, $id );

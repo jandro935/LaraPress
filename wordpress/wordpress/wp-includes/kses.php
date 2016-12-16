@@ -1541,12 +1541,12 @@ function wp_kses_data( $data ) {
 /**
  * Sanitize content for allowed HTML tags for post content.
  *
- * Post content refers to the page contents of the 'post' type and not $_POST
+ * Posts content refers to the page contents of the 'post' type and not $_POST
  * data from forms.
  *
  * @since 2.0.0
  *
- * @param string $data Post content to filter, expected to be escaped with slashes
+ * @param string $data Posts content to filter, expected to be escaped with slashes
  * @return string Filtered post content with allowed HTML tags and attributes intact.
  */
 function wp_filter_post_kses( $data ) {
@@ -1556,12 +1556,12 @@ function wp_filter_post_kses( $data ) {
 /**
  * Sanitize content for allowed HTML tags for post content.
  *
- * Post content refers to the page contents of the 'post' type and not $_POST
+ * Posts content refers to the page contents of the 'post' type and not $_POST
  * data from forms.
  *
  * @since 2.9.0
  *
- * @param string $data Post content to filter
+ * @param string $data Posts content to filter
  * @return string Filtered post content with allowed HTML tags and attributes intact.
  */
 function wp_kses_post( $data ) {
@@ -1616,7 +1616,7 @@ function kses_init_filters() {
 	else
 		add_filter( 'pre_comment_content', 'wp_filter_kses' );
 
-	// Post filtering
+	// Posts filtering
 	add_filter('content_save_pre', 'wp_filter_post_kses');
 	add_filter('excerpt_save_pre', 'wp_filter_post_kses');
 	add_filter('content_filtered_save_pre', 'wp_filter_post_kses');
@@ -1642,7 +1642,7 @@ function kses_remove_filters() {
 	remove_filter( 'pre_comment_content', 'wp_filter_post_kses' );
 	remove_filter( 'pre_comment_content', 'wp_filter_kses' );
 
-	// Post filtering
+	// Posts filtering
 	remove_filter('content_save_pre', 'wp_filter_post_kses');
 	remove_filter('excerpt_save_pre', 'wp_filter_post_kses');
 	remove_filter('content_filtered_save_pre', 'wp_filter_post_kses');

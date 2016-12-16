@@ -1,9 +1,9 @@
 <?php
 /**
- * Post API: Walker_PageDropdown class
+ * Posts API: Walker_PageDropdown class
  *
  * @package WordPress
- * @subpackage Post
+ * @subpackage Posts
  * @since 4.4.0
  */
 

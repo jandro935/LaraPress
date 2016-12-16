@@ -3597,9 +3597,9 @@ function get_attached_media( $type, $post = 0 ) {
 	 *
 	 * @since 3.6.0
 	 *
-	 * @param array  $args Post query arguments.
+	 * @param array  $args Posts query arguments.
 	 * @param string $type Mime type of the desired media.
-	 * @param mixed  $post Post ID or object.
+	 * @param mixed  $post Posts ID or object.
 	 */
 	$args = apply_filters( 'get_attached_media_args', $args, $type, $post );
 

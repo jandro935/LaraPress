@@ -28,7 +28,7 @@ add_action( 'wpmueditblogaction', 'upload_space_setting' );
 // Taxonomy Hooks
 add_filter( 'get_term', 'sync_category_tag_slugs', 10, 2 );
 
-// Post Hooks.
+// Posts Hooks.
 add_filter( 'wp_insert_post_data', 'avoid_blog_page_permalink_collision', 10, 2 );
 
 // Tools Hooks.

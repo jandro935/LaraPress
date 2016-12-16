@@ -679,7 +679,7 @@ class WP_Query {
 	 *     @type int          $meta_value_num          Custom field value number.
 	 *     @type int          $menu_order              The menu order of the posts.
 	 *     @type int          $monthnum                The two-digit month. Default empty. Accepts numbers 1-12.
-	 *     @type string       $name                    Post slug.
+	 *     @type string       $name                    Posts slug.
 	 *     @type bool         $nopaging                Show all posts (true) or paginate (false). Default false.
 	 *     @type bool         $no_found_rows           Whether to skip counting the total rows found. Enabling can improve
 	 *                                                 performance. Default false.
@@ -696,7 +696,7 @@ class WP_Query {
 	 *                                                 'comment_count', 'meta_value', 'meta_value_num', 'post__in',
 	 *                                                 'post_name__in', 'post_parent__in', and the array keys
 	 *                                                 of `$meta_query`.
-	 *     @type int          $p                       Post ID.
+	 *     @type int          $p                       Posts ID.
 	 *     @type int          $page                    Show the number of posts that would show up on page X of a
 	 *                                                 static front page.
 	 *     @type int          $paged                   The number of the current page.
@@ -737,7 +737,7 @@ class WP_Query {
 	 *                                                 true. Note: a string of comma-separated IDs will NOT work.
 	 *     @type array        $tax_query               An associative array of WP_Tax_Query arguments.
 	 *                                                 See WP_Tax_Query->queries.
-	 *     @type string       $title                   Post title.
+	 *     @type string       $title                   Posts title.
 	 *     @type bool         $update_post_meta_cache  Whether to update the post meta cache. Default true.
 	 *     @type bool         $update_post_term_cache  Whether to update the post term cache. Default true.
 	 *     @type bool         $lazy_load_term_meta     Whether to lazy-load term meta. Setting to false will

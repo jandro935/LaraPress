@@ -763,7 +763,7 @@ function wp_check_locked_posts( $response, $data, $screen_id ) {
 }
 
 /**
- * Check lock status on the New/Edit Post screen and refresh the lock
+ * Check lock status on the New/Edit Posts screen and refresh the lock
  *
  * @since 3.6.0
  *
@@ -806,7 +806,7 @@ function wp_refresh_post_lock( $response, $data, $screen_id ) {
 }
 
 /**
- * Check nonce expiration on the New/Edit Post screen and refresh if needed
+ * Check nonce expiration on the New/Edit Posts screen and refresh if needed
  *
  * @since 3.6.0
  *
@@ -844,7 +844,7 @@ function wp_refresh_post_nonces( $response, $data, $screen_id ) {
 }
 
 /**
- * Disable suspension of Heartbeat on the Add/Edit Post screens.
+ * Disable suspension of Heartbeat on the Add/Edit Posts screens.
  *
  * @since 3.8.0
  *
@@ -922,7 +922,7 @@ function wp_admin_canonical_url() {
 /**
  * Outputs JS that reloads the page if the user navigated to it with the Back or Forward button.
  *
- * Used on the Edit Post and Add New Post screens. Needed to ensure the page is not loaded from browser cache,
+ * Used on the Edit Posts and Add New Posts screens. Needed to ensure the page is not loaded from browser cache,
  * so the post title and editor content are the last saved versions. Ideally this script should run first in the head.
  *
  * @since 4.6.0

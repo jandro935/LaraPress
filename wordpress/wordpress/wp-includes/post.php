@@ -1,9 +1,9 @@
 <?php
 /**
- * Core Post API
+ * Core Posts API
  *
  * @package WordPress
- * @subpackage Post
+ * @subpackage Posts
  */
 
 //
@@ -472,8 +472,8 @@ function get_children( $args = '', $output = OBJECT ) {
  *
  * @since 1.0.0
  *
- * @param string $post Post content.
- * @return array Post before ('main'), after ('extended'), and custom read more ('more_text').
+ * @param string $post Posts content.
+ * @return array Posts before ('main'), after ('extended'), and custom read more ('more_text').
  */
 function get_extended( $post ) {
 	//Match the new style more links.
@@ -574,7 +574,7 @@ function get_post_ancestors( $post ) {
 }
 
 /**
- * Retrieve data from a post field based on Post ID.
+ * Retrieve data from a post field based on Posts ID.
  *
  * Examples of the post field will be, 'post_type', 'post_status', 'post_content',
  * etc and based off of the post object property or key names.
@@ -587,8 +587,8 @@ function get_post_ancestors( $post ) {
  *
  * @see sanitize_post_field()
  *
- * @param string      $field   Post field name.
- * @param int|WP_Post $post    Optional. Post ID or post object. Defaults to current post.
+ * @param string      $field   Posts field name.
+ * @param int|WP_Post $post    Optional. Posts ID or post object. Defaults to current post.
  * @param string      $context Optional. How to filter the field. Accepts 'raw', 'edit', 'db',
  *                             or 'display'. Default 'display'.
  * @return string The value of the post field on success, empty string on failure.
@@ -626,15 +626,15 @@ function get_post_mime_type( $ID = '' ) {
 }
 
 /**
- * Retrieve the post status based on the Post ID.
+ * Retrieve the post status based on the Posts ID.
  *
  * If the post ID is of an attachment, then the parent post status will be given
  * instead.
  *
  * @since 2.0.0
  *
- * @param int|WP_Post $ID Optional. Post ID or post object. Default empty.
- * @return string|false Post status on success, false on failure.
+ * @param int|WP_Post $ID Optional. Posts ID or post object. Default empty.
+ * @return string|false Posts status on success, false on failure.
  */
 function get_post_status( $ID = '' ) {
 	$post = get_post($ID);
@@ -907,8 +907,8 @@ function post_type_exists( $post_type ) {
  *
  * @since 2.1.0
  *
- * @param int|WP_Post|null $post Optional. Post ID or post object. Default is global $post.
- * @return string|false          Post type on success, false on failure.
+ * @param int|WP_Post|null $post Optional. Posts ID or post object. Default is global $post.
+ * @return string|false          Posts type on success, false on failure.
  */
 function get_post_type( $post = null ) {
 	if ( $post = get_post( $post ) )
@@ -969,13 +969,13 @@ function get_post_types( $args = array(), $output = 'names', $operator = 'and' )
 /**
  * Registers a post type.
  *
- * Note: Post type registrations should not be hooked before the
+ * Note: Posts type registrations should not be hooked before the
  * {@see 'init'} action. Also, any taxonomy connections should be
  * registered via the `$taxonomies` argument to ensure consistency
  * when hooks such as {@see 'parse_query'} or {@see 'pre_get_posts'}
  * are used.
  *
- * Post types can support any number of built-in core features such
+ * Posts types can support any number of built-in core features such
  * as meta boxes, custom fields, post thumbnails, post statuses,
  * comments, and more. See the `$supports` argument for a complete
  * list of supported features.
@@ -984,13 +984,13 @@ function get_post_types( $args = array(), $output = 'names', $operator = 'and' )
  * @since 3.0.0 The `show_ui` argument is now enforced on the new post screen.
  * @since 4.4.0 The `show_ui` argument is now enforced on the post type listing
  *              screen and post editing screen.
- * @since 4.6.0 Post type object returned is now an instance of WP_Post_Type.
+ * @since 4.6.0 Posts type object returned is now an instance of WP_Post_Type.
  * @since 4.7.0 Introduced `show_in_rest`, 'rest_base' and 'rest_controller_class'
  *              arguments to register the post type in REST API.
  *
  * @global array $wp_post_types List of post types.
  *
- * @param string $post_type Post type key. Must not exceed 20 characters and may
+ * @param string $post_type Posts type key. Must not exceed 20 characters and may
  *                          only contain lowercase alphanumeric characters, dashes,
  *                          and underscores. See sanitize_key().
  * @param array|string $args {
@@ -1190,7 +1190,7 @@ function unregister_post_type( $post_type ) {
 /**
  * Build an object with all post type capabilities out of a post type object
  *
- * Post type capabilities use the 'capability_type' argument as a base, if the
+ * Posts type capabilities use the 'capability_type' argument as a base, if the
  * capability is not set in the 'capabilities' argument array or if the
  * 'capabilities' argument is not supplied.
  *
@@ -1239,7 +1239,7 @@ function unregister_post_type( $post_type ) {
  * @see register_post_type()
  * @see map_meta_cap()
  *
- * @param object $args Post type registration arguments.
+ * @param object $args Posts type registration arguments.
  * @return object object with all the capabilities as member variables.
  */
 function get_post_type_capabilities( $args ) {
@@ -1315,14 +1315,14 @@ function _post_type_meta_capabilities( $capabilities = null ) {
  *
  * - `name` - General name for the post type, usually plural. The same and overridden
  *          by `$post_type_object->label`. Default is 'Posts' / 'Pages'.
- * - `singular_name` - Name for one object of this post type. Default is 'Post' / 'Page'.
+ * - `singular_name` - Name for one object of this post type. Default is 'Posts' / 'Page'.
  * - `add_new` - Default is 'Add New' for both hierarchical and non-hierarchical types.
  *             When internationalizing this string, please use a {@link https://codex.wordpress.org/I18n_for_WordPress_Developers#Disambiguation_by_context gettext context}
  *             matching your post type. Example: `_x( 'Add New', 'product', 'textdomain' );`.
- * - `add_new_item` - Label for adding a new singular item. Default is 'Add New Post' / 'Add New Page'.
- * - `edit_item` - Label for editing a singular item. Default is 'Edit Post' / 'Edit Page'.
- * - `new_item` - Label for the new item page title. Default is 'New Post' / 'New Page'.
- * - `view_item` - Label for viewing a singular item. Default is 'View Post' / 'View Page'.
+ * - `add_new_item` - Label for adding a new singular item. Default is 'Add New Posts' / 'Add New Page'.
+ * - `edit_item` - Label for editing a singular item. Default is 'Edit Posts' / 'Edit Page'.
+ * - `new_item` - Label for the new item page title. Default is 'New Posts' / 'New Page'.
+ * - `view_item` - Label for viewing a singular item. Default is 'View Posts' / 'View Page'.
  * - `view_items` - Label for viewing post type archives. Default is 'View Posts' / 'View Pages'.
  * - `search_items` - Label for searching plural items. Default is 'Search Posts' / 'Search Pages'.
  * - `not_found` - Label used when no items are found. Default is 'No posts found' / 'No pages found'.
@@ -1331,8 +1331,8 @@ function _post_type_meta_capabilities( $capabilities = null ) {
  * - `parent_item_colon` - Label used to prefix parents of hierarchical items. Not used on non-hierarchical
  *                       post types. Default is 'Parent Page:'.
  * - `all_items` - Label to signify all items in a submenu link. Default is 'All Posts' / 'All Pages'.
- * - `archives` - Label for archives in nav menus. Default is 'Post Archives' / 'Page Archives'.
- * - `attributes` - Label for the attributes meta box. Default is 'Post Attributes' / 'Page Attributes'.
+ * - `archives` - Label for archives in nav menus. Default is 'Posts Archives' / 'Page Archives'.
+ * - `attributes` - Label for the attributes meta box. Default is 'Posts Attributes' / 'Page Attributes'.
  * - `insert_into_item` - Label for the media frame button. Default is 'Insert into post' / 'Insert into page'.
  * - `uploaded_to_this_item` - Label for the media frame filter. Default is 'Uploaded to this post' /
  *                           'Uploaded to this page'.
@@ -1362,7 +1362,7 @@ function _post_type_meta_capabilities( $capabilities = null ) {
  *
  * @access private
  *
- * @param object|WP_Post_Type $post_type_object Post type object.
+ * @param object|WP_Post_Type $post_type_object Posts type object.
  * @return object Object with all the labels as member variables.
  */
 function get_post_type_labels( $post_type_object ) {
@@ -1594,8 +1594,8 @@ function get_post_types_by_support( $feature, $operator = 'and' ) {
  *
  * @global wpdb $wpdb WordPress database abstraction object.
  *
- * @param int    $post_id   Optional. Post ID to change post type. Default 0.
- * @param string $post_type Optional. Post type. Accepts 'post' or 'page' to
+ * @param int    $post_id   Optional. Posts ID to change post type. Default 0.
+ * @param string $post_type Optional. Posts type. Accepts 'post' or 'page' to
  *                          name a few. Default 'post'.
  * @return int|false Amount of rows changed. Should be 1 for success and 0 for failure.
  */
@@ -1697,11 +1697,11 @@ function get_posts( $args = null ) {
 /**
  * Add meta data field to a post.
  *
- * Post meta data is called "Custom Fields" on the Administration Screen.
+ * Posts meta data is called "Custom Fields" on the Administration Screen.
  *
  * @since 1.5.0
  *
- * @param int    $post_id    Post ID.
+ * @param int    $post_id    Posts ID.
  * @param string $meta_key   Metadata name.
  * @param mixed  $meta_value Metadata value. Must be serializable if non-scalar.
  * @param bool   $unique     Optional. Whether the same key should not be added.
@@ -1801,8 +1801,8 @@ function delete_post_meta_by_key( $post_meta_key ) {
  *
  * @since 1.2.0
  *
- * @param int $post_id Optional. Post ID. Default is ID of the global $post.
- * @return array Post meta for the given post.
+ * @param int $post_id Optional. Posts ID. Default is ID of the global $post.
+ * @return array Posts meta for the given post.
  */
 function get_post_custom( $post_id = 0 ) {
 	$post_id = absint( $post_id );
@@ -1891,11 +1891,11 @@ function is_sticky( $post_id = 0 ) {
  *
  * @see sanitize_post_field()
  *
- * @param object|WP_Post|array $post    The Post Object or Array
+ * @param object|WP_Post|array $post    The Posts Object or Array
  * @param string               $context Optional. How to sanitize post fields.
  *                                      Accepts 'raw', 'edit', 'db', or 'display'.
  *                                      Default 'display'.
- * @return object|WP_Post|array The now sanitized Post Object or Array (will be the
+ * @return object|WP_Post|array The now sanitized Posts Object or Array (will be the
  *                              same type as $post).
  */
 function sanitize_post( $post, $context = 'display' ) {
@@ -1931,9 +1931,9 @@ function sanitize_post( $post, $context = 'display' ) {
  * @since 2.3.0
  * @since 4.4.0 Like `sanitize_post()`, `$context` defaults to 'display'.
  *
- * @param string $field   The Post Object field name.
- * @param mixed  $value   The Post Object value.
- * @param int    $post_id Post ID.
+ * @param string $field   The Posts Object field name.
+ * @param mixed  $value   The Posts Object value.
+ * @param int    $post_id Posts ID.
  * @param string $context Optional. How to sanitize post fields. Looks for 'raw', 'edit',
  *                        'db', 'display', 'attribute' and 'js'. Default 'display'.
  * @return mixed Sanitized value.
@@ -2581,9 +2581,9 @@ function _reset_front_page_settings_for_post( $post_id ) {
  *
  * @see wp_delete_post()
  *
- * @param int $post_id Optional. Post ID. Default is ID of the global $post
+ * @param int $post_id Optional. Posts ID. Default is ID of the global $post
  *                     if EMPTY_TRASH_DAYS equals true.
- * @return false|array|WP_Post|null Post data array, otherwise false.
+ * @return false|array|WP_Post|null Posts data array, otherwise false.
  */
 function wp_trash_post( $post_id = 0 ) {
 	if ( !EMPTY_TRASH_DAYS )
@@ -3211,8 +3211,8 @@ function wp_insert_post( $postarr, $wp_error = false ) {
 	 *
 	 * @since 3.1.0
 	 *
-	 * @param int   $post_parent Post parent ID.
-	 * @param int   $post_ID     Post ID.
+	 * @param int   $post_parent Posts parent ID.
+	 * @param int   $post_ID     Posts ID.
 	 * @param array $new_postarr Array of parsed post data.
 	 * @param array $postarr     Array of sanitized, but otherwise unmodified post data.
 	 */
@@ -3435,9 +3435,9 @@ function wp_insert_post( $postarr, $wp_error = false ) {
 			 *
 			 * @since 4.4.0
 			 *
-			 * @param int     $post_ID      Post ID.
-			 * @param WP_Post $post_after   Post object following the update.
-			 * @param WP_Post $post_before  Post object before the update.
+			 * @param int     $post_ID      Posts ID.
+			 * @param WP_Post $post_after   Posts object following the update.
+			 * @param WP_Post $post_before  Posts object before the update.
 			 */
 			do_action( 'attachment_updated', $post_ID, $post_after, $post_before );
 		} else {
@@ -3461,8 +3461,8 @@ function wp_insert_post( $postarr, $wp_error = false ) {
 		 *
 		 * @since 1.2.0
 		 *
-		 * @param int     $post_ID Post ID.
-		 * @param WP_Post $post    Post object.
+		 * @param int     $post_ID Posts ID.
+		 * @param WP_Post $post    Posts object.
 		 */
 		do_action( 'edit_post', $post_ID, $post );
 		$post_after = get_post($post_ID);
@@ -3472,9 +3472,9 @@ function wp_insert_post( $postarr, $wp_error = false ) {
 		 *
 		 * @since 3.0.0
 		 *
-		 * @param int     $post_ID      Post ID.
-		 * @param WP_Post $post_after   Post object following the update.
-		 * @param WP_Post $post_before  Post object before the update.
+		 * @param int     $post_ID      Posts ID.
+		 * @param WP_Post $post_after   Posts object following the update.
+		 * @param WP_Post $post_before  Posts object before the update.
 		 */
 		do_action( 'post_updated', $post_ID, $post_after, $post_before);
 	}
@@ -3487,8 +3487,8 @@ function wp_insert_post( $postarr, $wp_error = false ) {
 	 *
 	 * @since 3.7.0
 	 *
-	 * @param int     $post_ID Post ID.
-	 * @param WP_Post $post    Post object.
+	 * @param int     $post_ID Posts ID.
+	 * @param WP_Post $post    Posts object.
 	 * @param bool    $update  Whether this is an existing post being updated or not.
 	 */
 	do_action( "save_post_{$post->post_type}", $post_ID, $post, $update );
@@ -3498,8 +3498,8 @@ function wp_insert_post( $postarr, $wp_error = false ) {
 	 *
 	 * @since 1.5.0
 	 *
-	 * @param int     $post_ID Post ID.
-	 * @param WP_Post $post    Post object.
+	 * @param int     $post_ID Posts ID.
+	 * @param WP_Post $post    Posts object.
 	 * @param bool    $update  Whether this is an existing post being updated or not.
 	 */
 	do_action( 'save_post', $post_ID, $post, $update );
@@ -3509,8 +3509,8 @@ function wp_insert_post( $postarr, $wp_error = false ) {
 	 *
 	 * @since 2.0.0
 	 *
-	 * @param int     $post_ID Post ID.
-	 * @param WP_Post $post    Post object.
+	 * @param int     $post_ID Posts ID.
+	 * @param WP_Post $post    Posts object.
 	 * @param bool    $update  Whether this is an existing post being updated or not.
 	 */
 	do_action( 'wp_insert_post', $post_ID, $post, $update );
@@ -3658,10 +3658,10 @@ function check_and_publish_future_post( $post_id ) {
  * @global WP_Rewrite $wp_rewrite
  *
  * @param string $slug        The desired slug (post_name).
- * @param int    $post_ID     Post ID.
+ * @param int    $post_ID     Posts ID.
  * @param string $post_status No uniqueness checks are made if the post is still draft or pending.
- * @param string $post_type   Post type.
- * @param int    $post_parent Post parent ID.
+ * @param string $post_type   Posts type.
+ * @param int    $post_parent Posts parent ID.
  * @return string Unique slug for the post, based on $post_name (with a -1, -2, etc. suffix)
  */
 function wp_unique_post_slug( $slug, $post_ID, $post_status, $post_type, $post_parent ) {
@@ -3716,8 +3716,8 @@ function wp_unique_post_slug( $slug, $post_ID, $post_status, $post_type, $post_p
 		 *
 		 * @param bool   $bad_slug    Whether the post slug would be bad in a hierarchical post context.
 		 * @param string $slug        The post slug.
-		 * @param string $post_type   Post type.
-		 * @param int    $post_parent Post parent ID.
+		 * @param string $post_type   Posts type.
+		 * @param int    $post_parent Posts parent ID.
 		 */
 		if ( $post_name_check || in_array( $slug, $feeds ) || 'embed' === $slug || preg_match( "@^($wp_rewrite->pagination_base)?\d+$@", $slug )  || apply_filters( 'wp_unique_post_slug_is_bad_hierarchical_slug', false, $slug, $post_type, $post_parent ) ) {
 			$suffix = 2;
@@ -3781,10 +3781,10 @@ function wp_unique_post_slug( $slug, $post_ID, $post_status, $post_type, $post_p
 	 * @since 3.3.0
 	 *
 	 * @param string $slug          The post slug.
-	 * @param int    $post_ID       Post ID.
+	 * @param int    $post_ID       Posts ID.
 	 * @param string $post_status   The post status.
-	 * @param string $post_type     Post type.
-	 * @param int    $post_parent   Post parent ID
+	 * @param string $post_type     Posts type.
+	 * @param int    $post_parent   Posts parent ID
 	 * @param string $original_slug The original post slug.
 	 */
 	return apply_filters( 'wp_unique_post_slug', $slug, $post_ID, $post_status, $post_type, $post_parent, $original_slug );
@@ -3837,7 +3837,7 @@ function wp_add_post_tags( $post_id = 0, $tags = '' ) {
  *
  * @see wp_set_object_terms()
  *
- * @param int          $post_id Optional. The Post ID. Does not default to the ID of the global $post.
+ * @param int          $post_id Optional. The Posts ID. Does not default to the ID of the global $post.
  * @param string|array $tags    Optional. An array of tags to set for the post, or a string of tags
  *                              separated by commas. Default empty.
  * @param bool         $append  Optional. If true, don't delete existing tags, just add on. If false,
@@ -3987,8 +3987,8 @@ function wp_transition_post_status( $new_status, $old_status, $post ) {
 	 *
 	 * @since 2.3.0
 	 *
-	 * @param int     $post_id Post ID.
-	 * @param WP_Post $post    Post object.
+	 * @param int     $post_id Posts ID.
+	 * @param WP_Post $post    Posts object.
 	 */
 	do_action( "{$new_status}_{$post->post_type}", $post->ID, $post );
 }
@@ -5380,9 +5380,9 @@ function wp_mime_type_icon( $mime = 0 ) {
  *
  * @since 2.1.0
  *
- * @param int     $post_id     Post ID.
- * @param WP_Post $post        The Post Object
- * @param WP_Post $post_before The Previous Post Object
+ * @param int     $post_id     Posts ID.
+ * @param WP_Post $post        The Posts Object
+ * @param WP_Post $post_before The Previous Posts Object
  */
 function wp_check_for_changed_slugs( $post_id, $post, $post_before ) {
 	// Don't bother if it hasn't changed.
@@ -5708,8 +5708,8 @@ function clean_post_cache( $post ) {
 	 *
 	 * @since 2.5.0
 	 *
-	 * @param int     $post_id Post ID.
-	 * @param WP_Post $post    Post object.
+	 * @param int     $post_id Posts ID.
+	 * @param WP_Post $post    Posts object.
 	 */
 	do_action( 'clean_post_cache', $post->ID, $post );
 
@@ -5730,12 +5730,12 @@ function clean_post_cache( $post ) {
 }
 
 /**
- * Call major cache updating functions for list of Post objects.
+ * Call major cache updating functions for list of Posts objects.
  *
  * @since 1.5.0
  *
- * @param array  $posts             Array of Post objects
- * @param string $post_type         Optional. Post type. Default 'post'.
+ * @param array  $posts             Array of Posts objects
+ * @param string $post_type         Optional. Posts type. Default 'post'.
  * @param bool   $update_term_cache Optional. Whether to update the term cache. Default true.
  * @param bool   $update_meta_cache Optional. Whether to update the meta cache. Default true.
  */

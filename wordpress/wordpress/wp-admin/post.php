@@ -2,7 +2,7 @@
 /**
  * Edit post administration panel.
  *
- * Manage Post actions: post, edit, delete, etc.
+ * Manage Posts actions: post, edit, delete, etc.
  *
  * @package WordPress
  * @subpackage Administration
@@ -282,7 +282,7 @@ default:
 	 *
 	 * @since 4.6.0
 	 *
-	 * @param int $post_id Post ID sent with the request.
+	 * @param int $post_id Posts ID sent with the request.
 	 */
 	do_action( "post_action_{$action}", $post_id );
 

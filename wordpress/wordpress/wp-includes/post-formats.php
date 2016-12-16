@@ -1,9 +1,9 @@
 <?php
 /**
- * Post format functions.
+ * Posts format functions.
  *
  * @package WordPress
- * @subpackage Post
+ * @subpackage Posts
  */
 
 /**
@@ -11,7 +11,7 @@
  *
  * @since 3.1.0
  *
- * @param int|object|null $post Post ID or post object. Optional, default is the current post from the loop.
+ * @param int|object|null $post Posts ID or post object. Optional, default is the current post from the loop.
  * @return string|false The format if successful. False otherwise.
  */
 function get_post_format( $post = null ) {
@@ -87,16 +87,16 @@ function set_post_format( $post, $format ) {
  */
 function get_post_format_strings() {
 	$strings = array(
-		'standard' => _x( 'Standard', 'Post format' ), // Special case. any value that evals to false will be considered standard
-		'aside'    => _x( 'Aside',    'Post format' ),
-		'chat'     => _x( 'Chat',     'Post format' ),
-		'gallery'  => _x( 'Gallery',  'Post format' ),
-		'link'     => _x( 'Link',     'Post format' ),
-		'image'    => _x( 'Image',    'Post format' ),
-		'quote'    => _x( 'Quote',    'Post format' ),
-		'status'   => _x( 'Status',   'Post format' ),
-		'video'    => _x( 'Video',    'Post format' ),
-		'audio'    => _x( 'Audio',    'Post format' ),
+		'standard' => _x( 'Standard', 'Posts format' ), // Special case. any value that evals to false will be considered standard
+		'aside'    => _x( 'Aside',    'Posts format' ),
+		'chat'     => _x( 'Chat',     'Posts format' ),
+		'gallery'  => _x( 'Gallery',  'Posts format' ),
+		'link'     => _x( 'Link',     'Posts format' ),
+		'image'    => _x( 'Image',    'Posts format' ),
+		'quote'    => _x( 'Quote',    'Posts format' ),
+		'status'   => _x( 'Status',   'Posts format' ),
+		'video'    => _x( 'Video',    'Posts format' ),
+		'audio'    => _x( 'Audio',    'Posts format' ),
 	);
 	return $strings;
 }

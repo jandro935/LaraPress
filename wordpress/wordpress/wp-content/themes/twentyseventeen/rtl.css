@@ -199,7 +199,7 @@ input[type="checkbox"] {
 	text-align: left;
 }
 
-/* Post Formats */
+/* Posts Formats */
 
 .format-quote blockquote .icon {
 	left: auto;
@@ -209,7 +209,7 @@ input[type="checkbox"] {
 	transform: none;
 }
 
-/* Post Navigation */
+/* Posts Navigation */
 
 .nav-links .nav-previous .nav-title .nav-title-icon-wrapper,
 .nav-links .nav-next .nav-title .nav-title-icon-wrapper {
@@ -451,7 +451,7 @@ input[type="checkbox"] {
 		width: 62%;
 	}
 
-	/* Post formats */
+	/* Posts formats */
 
 	.format-quote blockquote .icon {
 		left: auto;
@@ -483,7 +483,7 @@ input[type="checkbox"] {
 		padding-right: 2em;
 	}
 
-	/* Post Navigation */
+	/* Posts Navigation */
 
 	.nav-links .nav-previous .nav-title .nav-title-icon-wrapper {
 		left: auto;

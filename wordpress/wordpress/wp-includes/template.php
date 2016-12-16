@@ -449,7 +449,7 @@ function get_search_template() {
  *
  * The hierarchy for this template looks like:
  *
- * 1. {Post Type Template}.php
+ * 1. {Posts Type Template}.php
  * 2. single-{post_type}-{post_name}.php
  * 3. single-{post_type}.php
  * 4. single.php
@@ -468,7 +468,7 @@ function get_search_template() {
  * @since 4.4.0 `single-{post_type}-{post_name}.php` was added to the top of the template hierarchy.
  * @since 4.7.0 The decoded form of `single-{post_type}-{post_name}.php` was added to the top of the
  *              template hierarchy when the post name contains multibyte characters.
- * @since 4.7.0 {Post Type Template}.php was added to the top of the template hierarchy.
+ * @since 4.7.0 {Posts Type Template}.php was added to the top of the template hierarchy.
  *
  * @see get_query_template()
  *

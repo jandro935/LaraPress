@@ -1,9 +1,9 @@
 <?php
 /**
- * Post API: WP_Post_Type class
+ * Posts API: WP_Post_Type class
  *
  * @package WordPress
- * @subpackage Post
+ * @subpackage Posts
  * @since 4.6.0
  */
 

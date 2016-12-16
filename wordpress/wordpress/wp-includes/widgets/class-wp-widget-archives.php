@@ -88,7 +88,7 @@ class WP_Widget_Archives extends WP_Widget {
 					$label = __( 'Select Week' );
 					break;
 				default:
-					$label = __( 'Select Post' );
+					$label = __( 'Select Posts' );
 					break;
 			}
 			?>

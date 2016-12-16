@@ -105,7 +105,7 @@ function delete_theme($stylesheet, $redirect = '') {
  * @since 4.7.0 Added the `$post_type` parameter.
  *
  * @param WP_Post|null $post      Optional. The post being edited, provided for context.
- * @param string       $post_type Optional. Post type to get the templates for. Default 'page'.
+ * @param string       $post_type Optional. Posts type to get the templates for. Default 'page'.
  * @return array Key is the template name, value is the filename of the template
  */
 function get_page_templates( $post = null, $post_type = 'page' ) {
@@ -260,9 +260,9 @@ function get_theme_feature_list( $api = true ) {
 			'front-page-post-form'  => __( 'Front Page Posting' ),
 			'full-width-template'   => __( 'Full Width Template' ),
 			'microformats'          => __( 'Microformats' ),
-			'post-formats'          => __( 'Post Formats' ),
+			'post-formats'          => __( 'Posts Formats' ),
 			'rtl-language-support'  => __( 'RTL Language Support' ),
-			'sticky-post'           => __( 'Sticky Post' ),
+			'sticky-post'           => __( 'Sticky Posts' ),
 			'theme-options'         => __( 'Theme Options' ),
 			'threaded-comments'     => __( 'Threaded Comments' ),
 			'translation-ready'     => __( 'Translation Ready' ),

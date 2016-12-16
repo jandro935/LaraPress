@@ -168,7 +168,7 @@ final class WP_Comment {
 	protected $populated_children = false;
 
 	/**
-	 * Post fields.
+	 * Posts fields.
 	 *
 	 * @since 4.4.0
 	 * @access protected

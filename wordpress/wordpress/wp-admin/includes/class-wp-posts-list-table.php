@@ -419,7 +419,7 @@ class WP_Posts_List_Table extends WP_List_Table {
 	 *
 	 * @global int $cat Currently selected category.
 	 *
-	 * @param string $post_type Post type slug.
+	 * @param string $post_type Posts type slug.
 	 */
 	protected function categories_dropdown( $post_type ) {
 		global $cat;
@@ -430,7 +430,7 @@ class WP_Posts_List_Table extends WP_List_Table {
 		 * @since 4.6.0
 		 *
 		 * @param bool   $disable   Whether to disable the categories drop-down. Default false.
-		 * @param string $post_type Post type slug.
+		 * @param string $post_type Posts type slug.
 		 */
 		if ( false !== apply_filters( 'disable_categories_dropdown', false, $post_type ) ) {
 			return;
@@ -1014,7 +1014,7 @@ class WP_Posts_List_Table extends WP_List_Table {
 			 * @since 2.5.1
 			 *
 			 * @param string  $t_time      The published time.
-			 * @param WP_Post $post        Post object.
+			 * @param WP_Post $post        Posts object.
 			 * @param string  $column_name The column name.
 			 * @param string  $mode        The list display mode ('excerpt' or 'list').
 			 */
@@ -1206,7 +1206,7 @@ class WP_Posts_List_Table extends WP_List_Table {
 	 * @since 4.3.0
 	 * @access protected
 	 *
-	 * @param object $post        Post being acted upon.
+	 * @param object $post        Posts being acted upon.
 	 * @param string $column_name Current column name.
 	 * @param string $primary     Primary column name.
 	 * @return string Row actions output for posts.
@@ -1355,7 +1355,7 @@ class WP_Posts_List_Table extends WP_List_Table {
 			 *
 			 * @param bool   $show_in_quick_edit Whether to show the current taxonomy in Quick Edit.
 			 * @param string $taxonomy_name      Taxonomy name.
-			 * @param string $post_type          Post type of current Quick Edit post.
+			 * @param string $post_type          Posts type of current Quick Edit post.
 			 */
 			if ( ! apply_filters( 'quick_edit_show_taxonomy', $show_in_quick_edit, $taxonomy_name, $screen->post_type ) ) {
 				continue;

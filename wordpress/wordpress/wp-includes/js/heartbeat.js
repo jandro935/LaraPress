@@ -427,7 +427,7 @@
 			}
 
 			if ( ! settings.hasFocus ) {
-				interval = 120000; // 120 sec. Post locks expire after 150 sec.
+				interval = 120000; // 120 sec. Posts locks expire after 150 sec.
 			} else if ( settings.countdown > 0 && settings.tempInterval ) {
 				interval = settings.tempInterval;
 				settings.countdown--;
