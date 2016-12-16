@@ -9,9 +9,11 @@ class HomeController extends Controller
 	public function index()
 	{
 		$id = 1;
-		$data = Post::findOrFail($id);
+//		$data = Post::findOrFail($id);
 
-		return view('home', compact('data'));
+		$data = Post::all();
+
+		return view('posts/list', compact('data'));
 
 	}
 }
