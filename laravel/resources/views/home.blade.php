@@ -20,9 +20,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">jandro935</a>
+                <a class="navbar-brand" href="{{ url('/') }}">jandro935</a>
             </div>
-        </div><!-- /.container-fluid -->
+        </div>
     </nav>
 
     <div class="container">

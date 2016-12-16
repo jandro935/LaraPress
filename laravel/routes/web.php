@@ -11,11 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::get('/', [
-	'as' => 'home',
-	'uses' => 'HomeController@index'
+	'as' => 'posts.index',
+	'uses' => 'PostsController@index'
 ]);
+
+Route::get('/{slug}', [
+	'as' => 'posts.show',
+	'uses' => 'PostsController@show'
+]);
+
